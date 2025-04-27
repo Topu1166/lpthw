@@ -1,0 +1,28 @@
+################### Questions ###################
+
+#A. For Loop 
+
+1. Create a for loop that countss the numbers of even and odd
+integers in the list below. It should return two strings on
+seperate lines that prints sentences. And what would
+be the sum of even and odd integers write them seperately. 
+
+2. Print trinangles and squares/retangles using loops. 
+
+3. Write 4 seperate for loops that prints every elements
+from the following 4 lists: (i) list = ['apple', 'cherry',..]
+(ii) numbers = [1, 2, 3, 4, 5] (iii) city_Name = ['Dhaka',
+'Gazipur', 'Melbourne',....] (iv) people = ['Rony', 'David',
+'Joy', 'Jody']
+
+4.  Write a for loop that prints the integers from the 
+following/a list, but only if they are even.
+
+5. Write an infinite loop.
+#B. Over all: 
+6. Exercise 4: Factorial Function
+Write a function that takes a number and returns its factorial.
+7. Reversing a number using a while loop: 
+8. Write a python function named count_vowels that takes a string a
+as an input and returns the number of vowels (a, e, i, o, u) in the string. 
+9. 

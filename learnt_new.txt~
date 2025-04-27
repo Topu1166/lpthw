@@ -1,0 +1,8 @@
+#What I have learnt new: 
+1. What encoding and decoding are.
+2. Use of open and as
+3. Use flags always with .open('r','w', 'a') method
+4. Use of "try: except ValueError:" 
+5. Image into pdf
+6. Recursive method (factorial)
+7. Reversing number using while loop and slice() function 

@@ -1,0 +1,100 @@
+####### Basic Movement (Navigation): ##########################
+
+Key:     Action:
+
+h        Move left
+j        Move down
+k	 Move up
+l	Move right 
+w	Jump forward to the next word
+b	Jump back to the previous word
+0	Go to the start of the line
+$	Go to the end of the line
+gg	Go to the top of the file
+G	Go to the bottom of the file
+
+ctrl + f 	Page down (forward)
+ctrl + b 	page up (backward) 
+
+
+####### 2. Switching Between Modes: ########################
+
+Command: 	Mode: 		Purpose:
+
+i		insert Mode	Start typing (insert before cursor)
+a		insert mode	Start typing (append after cursor)
+o		insert mode	Insert a new line below
+O		insert move	Insert a new line above 
+v		Visual mode 	Select text (like mouse dragging)
+Esc		Normal mode	Exit Insert/ Visual Mode
+
+
+###### 3. Editing Text: #########################################
+
+Command:	Action:
+
+x		Delete character under cursor
+dd		Delete entire line	
+yy		Copy (yank) the current line
+p		Paste after cursor
+P		Paste before cursor
+u		Undo last change
+ctrl + r	Redo
+
+
+####### 4. Saving and Exiting: #####################################
+
+Command:	Action:
+
+:w		Save the file
+:q		Quit Vim
+:wq or :x	Save and quit
+:q!		Force quit without saving 
+
+
+####### 5. Searching and Replacing: ##################################
+
+Command:	    Action:
+
+/keyword	    Search forward for "keyword" 
+?keyword	    Search backward for "keyword"
+n		    Go to next match
+N		    Go to previous match 
+:%s/old/new/g	    Replace all occurences of "old" with "new" 
+
+
+######## 6. Bonus Tips: ######################################
+
+1. ctrl + v  = Enter Visual Block Mode (useful for column editing).
+2. :%norm    = Apply a command to every line (e.g., :%norm adds # to 
+		the start of every line).
+3. :set number = show line numbers
+4. :set relativenumber = show relative line numbers (helps with 
+    navigation). 			
+
+
+
+############ _vimrc ##################
+@"
+" === Plugin Manager ===
+call plug#begin('~/.vim/plugged')
+Plug 'rakr/vim-one'
+Plug 'NLKNguyen/visual-studio-dark.vim'
+Plug 'tomasr/molokai'
+Plug 'jiangmiao/auto-pairs'
+call plug#end()
+
+" === Theme & Editor Settings ===
+set background=light
+colorscheme vslighthost
+syntax enable
+set termguicolors
+set number
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" === Auto-Pairs Configuration ===
+let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`'}
+let g:AutoPairsShortcutToggle = '<M-p>'
+"@ | Out-File $env:USERPROFILE\_vimrc -Encoding utf8

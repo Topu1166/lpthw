@@ -1,0 +1,5 @@
+1. Encoding and Decoding
+2. File copy and paste
+3. File truncate
+4. Making PDF file
+5. Guessing game  
