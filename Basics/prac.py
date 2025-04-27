@@ -3298,3 +3298,20 @@ my_list = [2, 8, 7, 19, 40]
 
 average = sum(my_list) / len(my_list) 
 print("The average number is {}.".format(round(average))) 
+
+# use the lambda function below:
+
+
+# Find the even numbers from a list.
+my_list = [2, 3, 8, 4, 33, 88, 99, 100] 
+
+new_list = [] 
+def even_num(lst):
+    for num in lst:
+        if num % 2 == 0: 
+            new_list.append(num) 
+
+    return new_list 
+
+rslt = even_num(my_list) 
+print("The even numbers are {}".format(rslt)) 
