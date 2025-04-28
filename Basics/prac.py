@@ -3329,3 +3329,7 @@ even = [num for num in number if num % 2 == 0]
 odd = [num for num in number if num % 2 != 0] 
 print("The even numbers are {}".format(even)) 
 print("The odd numbers are {}".format(odd)) 
+
+# From E:\ JakeWrite :
+#Find the prime number from the list: 
+
