@@ -3321,3 +3321,6 @@ lst = my_list
 
 even_number = [num for num in lst if num % 2 == 0]
 print("The even numbers are {}".format(even_number))
+
+# From E:\ JakeWrite :
+#Find the prime number from the list: 
