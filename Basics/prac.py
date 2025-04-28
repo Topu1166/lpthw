@@ -3321,3 +3321,11 @@ lst = my_list
 
 even_number = [num for num in lst if num % 2 == 0]
 print("The even numbers are {}".format(even_number))
+
+# From C:\ 
+# List comprehension even or odd:
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
+even = [num for num in number if num % 2 == 0]
+odd = [num for num in number if num % 2 != 0] 
+print("The even numbers are {}".format(even)) 
+print("The odd numbers are {}".format(odd)) 
