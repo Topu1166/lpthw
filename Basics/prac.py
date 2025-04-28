@@ -3315,3 +3315,9 @@ def even_num(lst):
 
 rslt = even_num(my_list) 
 print("The even numbers are {}".format(rslt)) 
+
+#Find the even numbers from a list a list comprehension.
+lst = my_list 
+
+even_number = [num for num in lst if num % 2 == 0]
+print("The even numbers are {}".format(even_number))
