@@ -3322,3 +3322,94 @@ lst = my_list
 even_number = [num for num in lst if num % 2 == 0]
 print("The even numbers are {}".format(even_number))
 
+
+# From C:\ 
+# List comprehension even or odd:
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
+even = [num for num in number if num % 2 == 0]
+odd = [num for num in number if num % 2 != 0] 
+print("The even numbers are {}".format(even)) 
+print("The odd numbers are {}".format(odd)) 
+
+#while loop:
+i = 0 
+numbers = [] 
+
+while i < 6:
+    print("The value of i is {}.".format(i)) 
+    numbers.append(i) 
+    print("The value of numbers is {}.".format(numbers)) 
+    i += 1 
+    print("Now, the value of i is {}.".format(i)) 
+
+print("The numbers: ") 
+for i in numbers:
+    print(i)
+
+# Do the same thing using a def function.
+
+def print_value(test):
+    numbers = [] 
+    for i in test: 
+        print("The value of i is {}.".format(i))
+        numbers.append(i) 
+        print("The value of numbers is {}".format(numbers)) 
+        i += 1 
+        print("Now the value of i is {}.".format(i))
+
+value = range(0, 6)  
+rslt = print_value(value) 
+print(rslt)
+
+#Making Decision: 
+print("""
+You entered in a dark room. 
+There are two rooms in it.
+Do you go through door #1 or door #2?
+""")
+door = input("> ") 
+if door == "1":
+    print("There is a bear here eating cheese.") 
+    print("What do you do?") 
+    print("Press 1 to take the cheese.") 
+    print("Press 2 screem at the bear.") 
+
+    bear = input("> ") 
+    if bear == "1": 
+        print(f"The bear eats your face off. Good job!") 
+    elif bear == "2": 
+        print(f"The bear eats you legs off. Good job!") 
+    else:
+        print("Well, doing {} is probably better.".format(bear)) 
+        print("Bear runs away.") 
+
+elif door == "2":
+    print("There is a ghost giving you a choice:") 
+    print("Press 1 to take the magic ball.") 
+    print("Press 2 to take the jellaries.") 
+    print("Press 3 to escape out of the room.")
+    ghost = input("> ") 
+    if ghost == "1" or ghost == "2":
+        print("The ghost takes your soul off of your body.")
+
+    else:
+        print("You get a new life.") 
+        print("You are safe now.") 
+
+else:
+    print("Stumble around and fall on a knife and die.") 
+
+  
+#Find the prime number from the list: 
+is_prime = True 
+for num in range(2, 6):
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False 
+if is_prime:
+    print(num)
+
+# Print the third element:
+my_list = ['orange', 'apple', 'goava', 'pineapple']
+print(my_list[2])  
+        
