@@ -3276,131 +3276,318 @@ def print_first_and_last_sorted(sentence):
 # remv_dup = list(set(my_list)) 
 # print("No duplicate: {}".format(remv_dup)) 
 
-# Write a Python program to find and print the 
-# largest number from the list below. 
-# values = [10, 45, 2, 99, 23, 78] 
-values = [10, 45, 2, 99, 23, 78] #global variable
+# # Write a Python program to find and print the 
+# # largest number from the list below. 
+# # values = [10, 45, 2, 99, 23, 78] 
+# values = [10, 45, 2, 99, 23, 78] #global variable
+# 
+# def largest_num(lst):  
+#     largest = 0 
+#     for x in lst: 
+#         if x > largest: 
+#             largest = x
+# 
+#     return largest 
+# 
+# rslt = largest_num(values)
+# print("Therefore, the largest number is {}.".format(rslt)) 
+# 
+# #Find the average number of a list using def and
+# #lambda functions. 
+# my_list = [2, 8, 7, 19, 40] 
+# 
+# average = sum(my_list) / len(my_list) 
+# print("The average number is {}.".format(round(average))) 
+# 
+# # use the lambda function below:
+# 
+# 
+# # Find the even numbers from a list.
+# my_list = [2, 3, 8, 4, 33, 88, 99, 100] 
+# 
+# new_list = [] 
+# def even_num(lst):
+#     for num in lst:
+#         if num % 2 == 0: 
+#             new_list.append(num) 
+# 
+#     return new_list 
+# 
+# rslt = even_num(my_list) 
+# print("The even numbers are {}".format(rslt)) 
+# 
+# #Find the even numbers from a list a list comprehension.
+# lst = my_list 
+# 
+# even_number = [num for num in lst if num % 2 == 0]
+# print("The even numbers are {}".format(even_number))
+# 
+# # From C:\ 
+# # List comprehension even or odd:
+# number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
+# even = [num for num in number if num % 2 == 0]
+# odd = [num for num in number if num % 2 != 0] 
+# print("The even numbers are {}".format(even)) 
+# print("The odd numbers are {}".format(odd)) 
+# 
+# # From E:\ JakeWrite :
+# #Find the prime number from the list: 
+# 
+# #while loop:
+# i = 0 
+# numbers = [] 
+# 
+# while i < 6:
+#     print("The value of i is {}.".format(i)) 
+#     numbers.append(i) 
+#     print("The value of numbers is {}.".format(numbers)) 
+#     i += 1 
+#     print("Now, the value of i is {}.".format(i)) 
+# 
+# print("The numbers: ") 
+# for i in numbers:
+#     print(i)
+# 
+# # Do the same thing using a def function.
+# 
+# def print_value(test):
+#     numbers = [] 
+#     for i in test: 
+#         print("The value of i is {}.".format(i))
+#         numbers.append(i) 
+#         print("The value of numbers is {}".format(numbers)) 
+#         i += 1 
+#         print("Now the value of i is {}.".format(i))
+# 
+# value = range(0, 6)  
+# rslt = print_value(value) 
+# print(rslt)
+# 
+# #Making Decision: 
+# print("""
+# You entered in a dark room. 
+# There are two rooms in it.
+# Do you go through door #1 or door #2?
+# """)
+# door = input("> ") 
+# if door == "1":
+#     print("There is a bear here eating cheese.") 
+#     print("What do you do?") 
+#     print("Press 1 to take the cheese.") 
+#     print("Press 2 screem at the bear.") 
+# 
+#     bear = input("> ") 
+#     if bear == "1": 
+#         print(f"The bear eats your face off. Good job!") 
+#     elif bear == "2": 
+#         print(f"The bear eats you legs off. Good job!") 
+#     else:
+#         print("Well, doing {} is probably better.".format(bear)) 
+#         print("Bear runs away.") 
+# 
+# elif door == "2":
+#     print("There is a ghost giving you a choice:") 
+#     print("Press 1 to take the magic ball.") 
+#     print("Press 2 to take the jellaries.") 
+#     print("Press 3 to escape out of the room.")
+#     ghost = input("> ") 
+#     if ghost == "1" or ghost == "2":
+#         print("The ghost takes your soul off of your body.")
+# 
+#     else:
+#         print("You get a new life.") 
+#         print("You are safe now.") 
+# 
+# else:
+#     print("Stumble around and fall on a knife and die.") 
+# 
+# #Now let's print something new here. 
+# # Guess the number:
+# 
+# 
+# def guess_num(number):
+#     
+#     guess = 0 
+#     while guess != number:
+#         guess = int(input("Guess the number for 1-10: ")) 
+#         if guess > number:
+#             print(f"The number is less than {guess}.") 
+#         elif guess < number:
+#             print(f"The number is greater than {guess}.") 
+# 
+#         else:
+#              print(f"Your guess {guess} is correct!") 
+# 
+# rslt = guess_num(3)
+# print(rslt) 
+# 
+# 
+# #Branches and Functions:
+# from sys import exit 
+# 
+# # gold room 
+# def gold_room():
+#     print("This room is full of gold.") 
+#     print("How much do you take?") 
+# 
+#     choice = input("> ") 
+#     if '0' in choice or '1' in choice:
+#         how_much = int(choice) 
+#     else:
+#         dead("Man, learn to type a number.") 
+#     if how_much < 50:
+#         print("Nice! You're not gredy, you win!") 
+#         exit(0) 
+#     else:
+#         dead("You gready bastard!") 
+# 
+# #bear room 
+# def bear_room():
+#     print("""There is a bear here.
+#           The bear has a bunch of honey.
+#           The fat bear is in front of another door.
+#           How are you going to move the bear.""")
+#     
+#     bear_moved = False 
+#     
+#     while True:
+#         choice = input("> ") 
+# 
+#         if choice == "take honey":
+#             dead("The bear looks at you and slaps your face off.") 
+#         
+#         elif choice == 'taunt bear' and not bear_moved:
+#             print("The bear has moved from the door.") 
+#             print("You can go through it now.") 
+#             bear_moved = True 
+#         elif choice == 'taunt bear' and bear_moved:
+#             dead("The bear gets pissed of and chews your legs off.") 
+#         elif choice == "open door" and bear_moved:
+#             gold_room()  
+# 
+# #cthulhu
+# def cthulhu_room():
+#     print("Here you see the greatd devil Cthulhu.") 
+#     print("He, it, whatever stares at you and you go insane.") 
+#     print("Do you flee for your life or eat your head?") 
+# 
+#     choice = input("> ") 
+# 
+#     if "flee" in choice:
+#         start() 
+#     elif "head" in choice:
+#         dead("Well that was tasty!") 
+#     else:
+#         cthulhu_room()  
+# # dead 
+# def dead(why):
+#     print(why, "Good job!") 
+#     exit(0) 
+# 
+# 
+# def start():
+#     print("You are in a dark room.") 
+#     print("There is a door to your right and left.") 
+#     print("Which one do you take?") 
+#     
+#     choice = input("> ") 
+# 
+#     if choice == "left":
+#         bear_room() 
+# 
+#     elif choice == "right":
+#         cthulhu_room() 
+# 
+#     else:
+#         dead("You stumble in a room until you starve.") 
+# 
+# start() 
 
-def largest_num(lst):  
-    largest = 0 
-    for x in lst: 
-        if x > largest: 
-            largest = x
+#Branches and Functions:
 
-    return largest 
-
-rslt = largest_num(values)
-print("Therefore, the largest number is {}.".format(rslt)) 
-
-#Find the average number of a list using def and
-#lambda functions. 
-my_list = [2, 8, 7, 19, 40] 
-
-average = sum(my_list) / len(my_list) 
-print("The average number is {}.".format(round(average))) 
-
-# use the lambda function below:
-
-
-# Find the even numbers from a list.
-my_list = [2, 3, 8, 4, 33, 88, 99, 100] 
-
-new_list = [] 
-def even_num(lst):
-    for num in lst:
-        if num % 2 == 0: 
-            new_list.append(num) 
-
-    return new_list 
-
-rslt = even_num(my_list) 
-print("The even numbers are {}".format(rslt)) 
-
-#Find the even numbers from a list a list comprehension.
-lst = my_list 
-
-even_number = [num for num in lst if num % 2 == 0]
-print("The even numbers are {}".format(even_number))
-
-# From C:\ 
-# List comprehension even or odd:
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  
-even = [num for num in number if num % 2 == 0]
-odd = [num for num in number if num % 2 != 0] 
-print("The even numbers are {}".format(even)) 
-print("The odd numbers are {}".format(odd)) 
-
-# From E:\ JakeWrite :
-#Find the prime number from the list: 
-
-#while loop:
-i = 0 
-numbers = [] 
-
-while i < 6:
-    print("The value of i is {}.".format(i)) 
-    numbers.append(i) 
-    print("The value of numbers is {}.".format(numbers)) 
-    i += 1 
-    print("Now, the value of i is {}.".format(i)) 
-
-print("The numbers: ") 
-for i in numbers:
-    print(i)
-
-# Do the same thing using a def function.
-
-def print_value(test):
-    numbers = [] 
-    for i in test: 
-        print("The value of i is {}.".format(i))
-        numbers.append(i) 
-        print("The value of numbers is {}".format(numbers)) 
-        i += 1 
-        print("Now the value of i is {}.".format(i))
-
-value = range(0, 6)  
-rslt = print_value(value) 
-print(rslt)
-
-#Making Decision: 
-print("""
-You entered in a dark room. 
-There are two rooms in it.
-Do you go through door #1 or door #2?
-""")
-door = input("> ") 
-if door == "1":
-    print("There is a bear here eating cheese.") 
-    print("What do you do?") 
-    print("Press 1 to take the cheese.") 
-    print("Press 2 screem at the bear.") 
-
-    bear = input("> ") 
-    if bear == "1": 
-        print(f"The bear eats your face off. Good job!") 
-    elif bear == "2": 
-        print(f"The bear eats you legs off. Good job!") 
+#gold room:
+def gold_room():
+    print("This room is full of gold.") 
+    print("How much do you take?") 
+    choice = input("> ") 
+    if choice == "0" or choice == "1":
+        how_much = int(input("> "))  
     else:
-        print("Well, doing {} is probably better.".format(bear)) 
-        print("Bear runs away.") 
-
-elif door == "2":
-    print("There is a ghost giving you a choice:") 
-    print("Press 1 to take the magic ball.") 
-    print("Press 2 to take the jellaries.") 
-    print("Press 3 to escape out of the room.")
-    ghost = input("> ") 
-    if ghost == "1" or ghost == "2":
-        print("The ghost takes your soul off of your body.")
-
+        print("Man, learn to type a number.") 
+    if how_much < 50:
+        print("Nice, you're not gready, you win!") 
+        exit(0) 
     else:
-        print("You get a new life.") 
-        print("You are safe now.") 
+        dead("You gready bastard!") 
 
-else:
-    print("Stumble around and fall on a knife and die.") 
+#Cthulhu room:
+def cthulhu_room():
+    print("Here you see the great evil Cthulhu.") 
+    print("He stares at you and you go insane.") 
+    print("Do you flee for your life or eat your head?") 
+    flee = False  
+    choice = input("> ") 
+    if "flee" in choice and not flee: 
+        start() 
+    elif "head" in choice or flee:
+        dead("Well that was tasty!") 
+    else:
+        cthulhu_room() 
+#bear room:
+def bear_room():
+    print("There is a bear here.")
+    print("The bear has a bunch of honey.") 
+    print("The fat bear is in front of the door.") 
+    print("How are you going to move the bear?") 
 
-  
-
+    bear_moved = False 
+    
+    while True:
+        choice = input("> ") 
         
+        if choice == "take honey":
+            dead("The bear looks at you and slaps your face off.")
+        elif choice == "taunt bear" and not bear_moved:
+            print("The bear has moved from the door.") 
+            print("You can go through it now.")
+            bear_moved = True 
+        elif choice == "taunt bear" and bear_moved:
+            dead("The bear gets pissed off and chews your legs off.")
+        elif choice == "open door" and bear_moved:
+            gold_room() 
+
+def dead(why):
+    print(why, "Good job!") 
+
+#start function:
+def start():
+    print("You are in a dark room.") 
+    print("There is a door to the right and left.") 
+    print("Which one do you take?") 
+
+    choice = input("> ") 
+
+    if choice == "left":
+        bear_room() 
+    elif choice == "right":
+        cthulhu_room() 
+    else:
+        dead("You stumble in a room until you starve.") 
+
+start() 
+
+# Find the Prime Numbers form 1 to 50:
+
+ 
+prime_num = []  
+for num in range(2, 51):
+    is_prime = True 
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False 
+            break
+
+    if is_prime: 
+        prime_num.append(num) 
+
+print(prime_num)   
