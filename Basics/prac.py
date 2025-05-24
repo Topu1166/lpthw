@@ -3505,89 +3505,462 @@ def print_first_and_last_sorted(sentence):
 
 #Branches and Functions:
 
-#gold room:
-def gold_room():
-    print("This room is full of gold.") 
-    print("How much do you take?") 
-    choice = input("> ") 
-    if choice == "0" or choice == "1":
-        how_much = int(input("> "))  
+# #gold room:
+# def gold_room():
+#     print("This room is full of gold.") 
+#     print("How much do you take?") 
+#     choice = input("> ") 
+#     if choice == "0" or choice == "1":
+#         how_much = int(input("> "))  
+#     else:
+#         print("Man, learn to type a number.") 
+#     if how_much < 50:
+#         print("Nice, you're not gready, you win!") 
+#         exit(0) 
+#     else:
+#         dead("You gready bastard!") 
+# 
+# #Cthulhu room:
+# def cthulhu_room():
+#     print("Here you see the great evil Cthulhu.") 
+#     print("He stares at you and you go insane.") 
+#     print("Do you flee for your life or eat your head?") 
+#     flee = False  
+#     choice = input("> ") 
+#     if "flee" in choice and not flee: 
+#         start() 
+#     elif "head" in choice or flee:
+#         dead("Well that was tasty!") 
+#     else:
+#         cthulhu_room() 
+# #bear room:
+# def bear_room():
+#     print("There is a bear here.")
+#     print("The bear has a bunch of honey.") 
+#     print("The fat bear is in front of the door.") 
+#     print("How are you going to move the bear?") 
+# 
+#     bear_moved = False 
+#     
+#     while True:
+#         choice = input("> ") 
+#         
+#         if choice == "take honey":
+#             dead("The bear looks at you and slaps your face off.")
+#         elif choice == "taunt bear" and not bear_moved:
+#             print("The bear has moved from the door.") 
+#             print("You can go through it now.")
+#             bear_moved = True 
+#         elif choice == "taunt bear" and bear_moved:
+#             dead("The bear gets pissed off and chews your legs off.")
+#         elif choice == "open door" and bear_moved:
+#             gold_room() 
+# 
+# def dead(why):
+#     print(why, "Good job!") 
+# 
+# #start function:
+# def start():
+#     print("You are in a dark room.") 
+#     print("There is a door to the right and left.") 
+#     print("Which one do you take?") 
+# 
+#     choice = input("> ") 
+# 
+#     if choice == "left":
+#         bear_room() 
+#     elif choice == "right":
+#         cthulhu_room() 
+#     else:
+#         dead("You stumble in a room until you starve.") 
+# 
+# start() 
+# 
+# # Find the Prime Numbers form 1 to 50:
+# 
+#  
+# prime_num = []  
+# for num in range(2, 51):
+#     is_prime = True 
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             is_prime = False 
+#             break
+# 
+#     if is_prime: 
+#         prime_num.append(num) 
+# 
+# print(prime_num)   
+# 
+# #range(2, 2): let's see what happens:
+# for i in range(2, 3):
+#     print("I will do that for you.") 
+
+# #Write a program that asks the user to enter a 
+# #number and jprints whether it is even or odd.
+# 
+# number = int(input("Enter a number to check even or odd: ")) 
+# 
+# if number % 2 == 0:
+#     num = f"The number {number} is an even number." 
+# 
+# else:
+#     num = f"The number {number} is an odd number." 
+# 
+# print(num) 
+# 
+# #Sum of Number from 1 to N:
+# N = int(input("Enter a number for the sum of it: ")) 
+# 
+# def sum_num(N):
+#     if N == 1:
+#         return 1 
+#     else:
+#         return N + sum_num(N - 1)
+# 
+# rslt = sum_num(N)  
+# print("The sum of the {} is {}.".format(N, rslt))
+# 
+# # Another aproach for sum of a number:
+# number = int(input("Enter a number for the sum of it: ")) 
+# 
+# sum = 0
+# for num in range(1, number + 1):
+#     sum += num 
+# print("The sum of {} is {}.".format(number, sum))
+# 
+# # 3. Find the largest Number: 
+# # Given a list of numbers [4, 9, 1, 22, 17], 
+# # write code to find the largest number. 
+# 
+# numbers = [-4, -9, -1, -48, -22, -17] 
+# 
+# def largest_num(numbers):
+#     largest = numbers[0]   
+#     for num in numbers: 
+#         if num > largest: 
+#             largest = num  
+#     
+#     return largest 
+# 
+# rslt = largest_num(numbers) 
+# print("The largest number is {}.".format(rslt))
+# 
+# #Another approach to find out the largest number.
+# #Using max() function: 
+# 
+# print(f"The largest number is {max(numbers)}.") 
+
+# #4. Check for Prime Number
+# #Write a number that takes an integer as an input
+# #and checks whether it's a prime number. 
+# number = int(input("Enter a number to check whether it's a prime number: ")) 
+# 
+# if number < 2:
+#     print(f"{number} is not a prime number.") 
+# else:
+# 
+#     is_prime = True 
+#     for num in range(2, int(number ** 0.5) + 1):
+#         if number % num == 0:
+#             is_prime = False 
+#             break 
+# 
+#     if is_prime:
+#         print(f"{number} is a prime number.") 
+#     else:
+#         print(f"{number} is not a prime number.")  
+# 
+# #5. Reverse a String
+# #Write a function that takes a string and returns
+# #it reversed (e.g., "hello" "olleh") 
+# 
+# string = input("Enter a word to reverse: ") 
+# 
+# def reverse_str(string):
+#     return string[::-1] 
+# 
+# rslt = reverse_str(string)
+# print(f"Reversed form is \"{rslt}\".")
+# 
+# # Let's do it manually:
+# rev_str = input("Enter a word or sentence to reverse: ") 
+# 
+# def reversed_str(string):
+#     empty_str = " "
+#     for char in string:
+#         empty_str = char + empty_str 
+#         
+#     return empty_str 
+# 
+# rslt = reversed_str(rev_str) 
+# # print(f"The reversed string is \"{int(rslt) + 1}\".") 
+# print(f"The reversed string is \"{rslt}\".")
+# #6. Count Vowels 
+# #Write a program to count the number of vowels 
+# #in a given string. 
+# 
+# def count_vowels(sentence):
+#     vowels = "AEIOUaeiou"
+#     count = 0  
+#     for char in sentence: 
+#         if char in vowels: 
+#             count += 1 
+#         
+#     return count 
+# 
+# sen = input("Enter a sentence to count vowels: ") 
+# rslt = count_vowels(sen)
+# if rslt == 0 or rslt == 1:
+#     print(f"There is only {rslt} vowel in the sencente.") 
+# else:
+#     print("There are {} vowels in the sentence.".format(rslt)) 
+# 
+# 
+# #7. Fibonacci Sequence :
+# #Write a function to print the first n numbers
+# #of the Fibonacci sequence. 
+# 
+# def fibonacci(n):
+#     if n == 0:
+#         return 0 
+#     elif n == 1:
+#         return 1 
+#     else:
+#         return fibonacci(n - 1) + fibonacci(n - 2) 
+# 
+# number = 10 
+# print("Fibonacci Sequence: ") 
+# for i in range(number + 1):
+#     print(fibonacci(i), end=' ') 
+
+# #8. Factorial of a Number 
+# #Write a program to calculate the factorial of a 
+# #given number using a for loop. 
+# 
+# n = int(input("Enter a number for its factorial: "))
+# fac = 1 
+# for i in range(1, n + 1):
+#     fac = i * fac 
+# 
+# print(f"The factorial of the number {n} is {fac}.")  
+# 
+# #Another approach:
+# number = int(input("Enter a number for its factorial: ")) 
+# def fac_recurse(num):
+#     if num == 1:
+#         return 1 
+#     else:
+#         return num * fac_recurse(num - 1) 
+#     
+# rslt = fac_recurse(number) 
+# print("The factorial of the number {} is {}.".format(n, rslt))
+
+
+# #9. List of Prime Numbers (1 - 50)
+# # Use a loop and logic to store all prime numbers 
+# # between 1 and 50 in a list. 
+# 
+# my_list = [] 
+# for number in range(2, 51):
+#     is_prime = True 
+# 
+#     for i in range(2, int(number ** 0.5) + 1):
+#         if number % i == 0:
+#             is_prime = False
+#             break  
+# 
+#     if is_prime:
+#         my_list.append(number) 
+# 
+# print(my_list) 
+# 
+# #Given a number N and an array A of N numbers.
+# #Print the array in a reversed order. 
+# 
+# 
+# 
+# #9. List of Prime Numbers (1 - 50)
+# # Use a loop and logic to store all prime numbers 
+# # between 1 and 50 in a list. 
+# prime_num = [] 
+# for num in range(2, 51):
+#     is_prime = True 
+# 
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             is_prime = False 
+#             break 
+#     
+#     if is_prime:
+#         prime_num.append(num) 
+# 
+# print(f"The prime numbers are {prime_num}.")
+# 
+# #open a file 
+# file_name = input("Ener a file name to read: ") 
+# 
+# target = open(file_name, 'r') 
+# print(f"{file_name}: ")
+# content = target.read()  
+# print(f"The content of the file:\n{content} ") 
+# target.close() 
+# 
+# #with-as 
+# file_name = input("Enter a file name to read: ") 
+# 
+# with open(file_name, 'r') as target:
+#     content = target.read() 
+# 
+# print(content) 
+
+
+# #9. List of Prime Numbers (1 - 50)
+# # Use a loop and logic to store all prime numbers 
+# # between 1 and 50 in a list. 
+# prime_numbers = []
+# for num in range(2, 51):
+#     is_prime = True 
+# 
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             is_prime = False 
+#             break  
+#     
+#     if is_prime:
+#         prime_numbers.append(num)
+# 
+# print("The prime numbers are {}.".format(prime_numbers)) 
+# 
+# #Find the Largest Number
+# #Given a list of numbers: [4, 9, 1, 22, 17], write
+# #code to find the largest number 
+# my_list = [4, 9, 1, 22, 17] 
+# 
+# largest_num = max(my_list) 
+# print(f"The largest number is {largest_num}.")
+# 
+# #Largest Number with Different approach: manually 
+# my_list1 = [4, 9, 1, 22, 17] 
+# 
+# def largest_num(lst):
+#     largest = my_list1[0] 
+# 
+#     for num in lst: 
+#         if num > largest:
+#             largest = num 
+# 
+#     return largest 
+# 
+# result = largest_num(my_list1) 
+# print("The largest number is {}.".format(result)) 
+
+##Count Vowels
+##Write a program to count the number of vowels in 
+##a given string. 
+#a_string = input("Enter a number to see how many\nvowels there are: ") 
+#
+#def count_vowels(given_str):
+#    vowels = "AEIOUaeiou"
+#    count = 0 
+#    for char in given_str:
+#        if char in vowels:
+#            count = count + 1 
+#
+#    return count 
+#
+#result = count_vowels(a_string)
+#print(f"There are {result} vowels in the sentence.") 
+#
+##Find the prime numbers from 1 to 50: 
+#prime_num = []  
+#
+#for num in range(2, 51):
+#    is_prime = True  
+#    for i in range(2, int(num ** 0.5) + 1):
+#        if num % i == 0:
+#            is_prime = False 
+#            break 
+#    
+#    if is_prime:
+#        prime_num.append(num) 
+#    
+#print("The prime numbers from 1 - 50 are {}.".format(prime_num)) 
+
+#Write a fibonacci number sequence:
+user_input = int(input("Enter a number: ")) 
+
+def fibonacci(num):
+    if num == 0: 
+        return 0 
+    if num == 1:
+        return 1 
     else:
-        print("Man, learn to type a number.") 
-    if how_much < 50:
-        print("Nice, you're not gready, you win!") 
-        exit(0) 
-    else:
-        dead("You gready bastard!") 
+        return fibonacci(num - 1) + fibonacci(num - 2) 
 
-#Cthulhu room:
-def cthulhu_room():
-    print("Here you see the great evil Cthulhu.") 
-    print("He stares at you and you go insane.") 
-    print("Do you flee for your life or eat your head?") 
-    flee = False  
-    choice = input("> ") 
-    if "flee" in choice and not flee: 
-        start() 
-    elif "head" in choice or flee:
-        dead("Well that was tasty!") 
-    else:
-        cthulhu_room() 
-#bear room:
-def bear_room():
-    print("There is a bear here.")
-    print("The bear has a bunch of honey.") 
-    print("The fat bear is in front of the door.") 
-    print("How are you going to move the bear?") 
+for i in range(user_input + 1):
+    print(fibonacci(user_input), end=' ') 
+#result = fibonacci(user_input) 
+#print("The {}th Fibonacci number is {}.".format(user_input, result))
 
-    bear_moved = False 
-    
-    while True:
-        choice = input("> ") 
-        
-        if choice == "take honey":
-            dead("The bear looks at you and slaps your face off.")
-        elif choice == "taunt bear" and not bear_moved:
-            print("The bear has moved from the door.") 
-            print("You can go through it now.")
-            bear_moved = True 
-        elif choice == "taunt bear" and bear_moved:
-            dead("The bear gets pissed off and chews your legs off.")
-        elif choice == "open door" and bear_moved:
-            gold_room() 
+# #Fibonacci Sequence Another Approach:
+# user_input = int(input("Enter a number: ")) 
+# 
+# def fibonacci_seq(num):
+#     sequence = [] 
+#     a, b = 0, 1 
+#     for i in range(num): 
+#         sequence.append(a) 
+#         a, b = b, a + b 
+# 
+#     return sequence 
+# result = fibonacci_seq(user_input) 
+# print("The fibonacci sequence from 0 to {} is {}.".format(user_input, result)) 
+# 
+# #reverse a string 
+# def reverse_str(word):
+#     return word[:: -1]  
+# 
+# input_word = input("Enter a sentence to reverse: ")
+# result = reverse_str(input_word) 
+# print("Reversed string: ", result) 
+# 
+# #reverse a sentence; another approach
+# reverse_word = input("Enter a sentence to reverse: ") 
+# 
+# def reverse(word):
+#     reversed_word = " "
+#     
+#     for char in word: 
+#         reversed_word = char + reversed_word  
+# 
+#     return reversed_word 
+# 
+# result = reverse(reverse_word) 
+# print(result)
+# 
+# #reverse a big number 
+# number = int(input("Enter a number: ")) 
+# 
+# def reverse_num(num): 
+#     reversed_number = 0 
+#     while num > 0: 
+#         remainder = num % 10 
+#         reversed_number = reversed_number * 10 + remainder 
+#         num = num // 10 
+#     return reversed_number 
+# 
+# result = reverse_num(number) 
+# print(f"The reversed number is {result}.") 
 
-def dead(why):
-    print(why, "Good job!") 
+##Extracting a .zip file:
+#import zipfile 
+#file_name = input("File name to extract: ") 
+#
+#with zipfile.ZipFile(file_name, 'r') as archive: 
+#    archive.extractall()
 
-#start function:
-def start():
-    print("You are in a dark room.") 
-    print("There is a door to the right and left.") 
-    print("Which one do you take?") 
-
-    choice = input("> ") 
-
-    if choice == "left":
-        bear_room() 
-    elif choice == "right":
-        cthulhu_room() 
-    else:
-        dead("You stumble in a room until you starve.") 
-
-start() 
-
-# Find the Prime Numbers form 1 to 50:
-
- 
-prime_num = []  
-for num in range(2, 51):
-    is_prime = True 
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            is_prime = False 
-            break
-
-    if is_prime: 
-        prime_num.append(num) 
-
-print(prime_num)   
+import os 
+print('Your current working directory: ') 
+print(os.getcwd()) 
+print(os.listdir()) 
