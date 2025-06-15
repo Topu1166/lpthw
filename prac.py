@@ -2720,3 +2720,64 @@ print("Prints the elements which are subtracted from num2: ", my_difference)
 my_symmetric_difference = num1 ^ num2 
 print("Prints all the elements except the common ones: ", my_symmetric_difference) 
 
+ten_things = "Apples Oranges Crows Telephone Light Sugar"
+print("Wait there are not 10 things in that list. Let's fix that.") 
+
+stuff = ten_things.split(' ')
+more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+
+while len(stuff) != 10:
+    next_one = more_stuff.pop() 
+    print("Adding:", next_one) 
+    stuff.append(next_one) 
+    print("There are {} items now.".format(len(stuff))) 
+
+print(f"There we go: ", stuff) 
+print('Let\'s do something with stuff.') 
+
+print(stuff[1]) 
+print(stuff[-1]) 
+print(stuff.pop()) 
+print(' '.join(stuff)) 
+print('#'.join(stuff[3:5])) 
+
+
+
+#
+words = "Apple Bananna Cherry Goava Phone Laptop"
+my_words = words.split(' ') 
+
+more_words = ['headphone', 'page', 'stickynote', 'cat', 'Larry'] 
+
+while len(my_words) != 10:
+    stuff = more_words.pop() 
+    print("Adding: ", stuff) 
+    my_words.append(stuff) 
+    print(f"There are {len(my_words)} items now.") 
+     
+print(f"The 10 items are: ", my_words) 
+print(my_words[1]) 
+print(my_words[-1]) 
+print(my_words.pop()) 
+print(f"There are {len(my_words)} items now as we poped: {words}") 
+print(' '.join(my_words)) 
+print('#'.join(my_words[2:7])) 
+
+
+#Exercise 38: 
+some_words = "Phone Notepad Earphone Car Rat"
+words = some_words.split() 
+more_words = ["Ball", "Girl", "Party", "Book", "Most", "Hit"] 
+
+while len(words) != 10:
+    stuff = more_words.pop() 
+    print("Adding: ", stuff) 
+    words.append(stuff) 
+    print(f"There are {len(words)} item now.") 
+
+print("The {} words are {}.".format(len(words), words))
+print(words[1]) 
+print(words[-1]) 
+print(words.pop()) 
+print(' '.join(words)) 
+print(' #'.join(words[2:7])) 

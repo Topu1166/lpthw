@@ -3887,21 +3887,21 @@ def print_first_and_last_sorted(sentence):
 #    
 #print("The prime numbers from 1 - 50 are {}.".format(prime_num)) 
 
-#Write a fibonacci number sequence:
-user_input = int(input("Enter a number: ")) 
-
-def fibonacci(num):
-    if num == 0: 
-        return 0 
-    if num == 1:
-        return 1 
-    else:
-        return fibonacci(num - 1) + fibonacci(num - 2) 
-
-for i in range(user_input + 1):
-    print(fibonacci(user_input), end=' ') 
-#result = fibonacci(user_input) 
-#print("The {}th Fibonacci number is {}.".format(user_input, result))
+##Write a fibonacci number sequence:
+#user_input = int(input("Enter a number: ")) 
+#
+#def fibonacci(num):
+#    if num == 0: 
+#        return 0 
+#    if num == 1:
+#        return 1 
+#    else:
+#        return fibonacci(num - 1) + fibonacci(num - 2) 
+#
+#for i in range(user_input + 1):
+#    print(fibonacci(i), end=' ') 
+##result = fibonacci(user_input) 
+##print("The {}th Fibonacci number is {}.".format(user_input, result))
 
 # #Fibonacci Sequence Another Approach:
 # user_input = int(input("Enter a number: ")) 
@@ -3959,8 +3959,296 @@ for i in range(user_input + 1):
 #
 #with zipfile.ZipFile(file_name, 'r') as archive: 
 #    archive.extractall()
+#
+#import os 
+#print('Your current working directory: ') 
+#print(os.getcwd()) 
+#print(os.listdir()) 
+#print('.git' in os.listdir())
+#
+##Check the current working directory and check if
+##the folder exists, it not create one. 
+#print("Current Folder:", os.getcwd())#print the current directory 
+#
+#current_folder = input("Name the current folder: ")
+#if not os.path.exists(current_folder):#
+#    file_name = input("Name the folder: ")
+#    os.makedirs(file_name)
+#    print("The directory has been created.") 
+#
+#else:
+#    print("The directory already exists.") 
 
-import os 
-print('Your current working directory: ') 
-print(os.getcwd()) 
-print(os.listdir()) 
+# my_list = ['red', 'black', 'blue', 'green'] 
+# my_list.remove('blue') 
+# print(my_list) 
+# 
+# print("Print the first three elements.") 
+# my_list.append("yellow") 
+# print(my_list[:3]) 
+# 
+# print("Write a for loop to print each element..:") 
+# for i in my_list:
+#     print(i, end=', ') 
+# print("\n")
+# print('apple' in my_list) 
+# 
+# #Sort the list below in acending order:
+# number = [23, 4, 23, 8, 48, 22, 3] 
+# num = sorted(number) 
+# print(num) 
+# 
+# #Manually, Bubble Sort:  
+# for i in range(len(number)):
+#     for j in range(len(number) - i - 1):
+#         if number[j] > number[j + 1]:
+#             #swap 
+#             number[j], number[j + 1] = number[j + 1], number[j] 
+# 
+# print(number) 
+#
+##Guess the number:
+#import random  
+#
+#def guess_num(num):
+#    random_num = random.randint(1, num) 
+#    number = 0 
+#    while number != random_num:
+#        number = int(input("Guess the number form 1 - 10: ")) 
+#        if number < random_num:
+#            print(f'{number} is less than the expected number.') 
+#        elif number > random_num:
+#            print(f"{number} is more than the desired number.") 
+#
+#    print(f"Congratulations!\n{number} is the correct number.\nYou've guessed it correctly.") 
+#
+#guess_num = 10 
+
+##Guess the number:
+#import random
+#def guess_number(x):
+# 
+#    random_num = random.randint(1, x) 
+#    guess_num = 0  
+#
+#    while guess_num != random_num:
+#        guess_num = int(input("Guess the number: ")) 
+#        if guess_num < random_num:
+#            print(f"It's more than {guess_num}.") 
+#        elif guess_num > random_num:
+#            print(f"It's less than {guess_num}.")
+#
+#    print(f"Congratulation! {guess_num} is the correct number.") 
+#
+#guess_number(10)
+#
+##let computer guess the number:
+#def computer_guess(x):
+#    low = 1 
+#    high = x 
+#    feedback = ''
+#    while feedback != 'c':
+#        if low != high:
+#            guess = random.randint(low, high) 
+#        else:
+#            guess = low #could also be high 
+#        feedback = input(f'Is {guess} too high (H), too low (L), or correct? (C)').lower() 
+#
+#        if feedback == 'h':
+#            high = guess - 1 
+#        elif feedback == 'l': 
+#            low = guess + 1 
+#             
+#    print(f"Yay! The computer guessed your number, {guess}, correctly!") 
+#
+#computer_guess(10)
+#
+##Computer guesses the number:
+#def computer_guess(x):
+#    low = 1 
+#    high = x 
+#    feedback = ''
+#    
+#    while feedback != 'c': 
+#        if low != high:
+#            guess = random.randint(low, high) 
+#        else:
+#            guess = low #it could also be high 
+#        
+#        feedback = input(f"Is {guess} too high (H), too low (L), or correct (C)?: ").lower() 
+#
+#        if feedback == 'h':
+#            high = guess - 1 
+#        elif feedback == 'l':
+#            low = guess + 1 
+#
+#    print(f"Yay! The computer guessed your number, {guess}, correctly!") 
+#
+#computer_guess(10) 
+
+##Guess the number:
+#import random 
+#def guess_number(x):
+#    random_number = random.randint(1, x)
+#    guess = 0 
+#    
+#    while guess != random_number:
+#        guess = int(input("Guess the number: ")) 
+#        if guess > random_number: 
+#            print(f"The number is smaller than {guess}.") 
+#        elif guess < random_number:
+#            print(f"The number is bigger than {guess}.") 
+#        
+#    print(f"Yay! You have guessed the number, {guess}, correctly.") 
+#
+#guess_number(10)
+#
+##let the computer guess the number.
+#def computer_guess(x):
+#    low = 1
+#    high = x 
+#    feedback = ''
+#
+#    while feedback != 'c':
+#        if low != high:
+#            guess = random.randint(low, high) 
+#        else:
+#            guess = low 
+#        
+#        feedback = input(f"Is {guess} to high (H), too low (L), or correct (C)?: ").lower() 
+#
+#        if feedback == 'h':
+#            high = guess - 1 
+#        elif feedback == 'l':
+#            low = guess + 1 
+#
+#    print(f"Yay! The computer guessed your number, {guess}, correctly.") 
+#
+#computer_guess(1000) 
+
+
+##Sort the list below in asscending order and print it.
+#my_list = [22, 8, 43, 23, 3, 18, 5] 
+#my_list.sort() 
+#print(my_list) 
+#
+##Using Bubble Sort Method:
+#def bubble_sort(lst):
+#    item_len = len(lst) - 1 
+#
+#    for i in range(item_len):
+#        for j in range(item_len - i):
+#            if lst[j] > lst[j + 1]:
+#                lst[j], lst[j + 1] = lst[j + 1], lst[j] 
+#            print(lst) 
+#
+#numbers = [5, 3, 1, 2, 4] 
+#bubble_sort(numbers) 
+#
+##Create a new list containing the squares of numbers
+##from 1 to 5 using list comprehension 
+#square_num = [x ** 2 for x in numbers] 
+#print("The squares of the numbers are: ", square_num) 
+#
+##Alternative way:
+#def square_number(lst):
+#    squared = []  
+#    for i in lst:
+#        squ = i ** 2 
+#        squared.append(squ) 
+#    return squared 
+#
+#print(numbers) 
+#square = square_number(numbers) 
+#print(f"Alternate way: {square}")
+#
+##Write a Python program to remove duplicate elements 
+##from the list below and print the updated list. 
+#my_list = [3, 1, 5, 3, 2, 1, 8] 
+#rm_dup = list(set(my_list)) 
+#print("Duplicates are removed: ", rm_dup) 
+#
+##Write a python program to find and print the 
+##largest number from the list below.
+##[10, 45, 2, 99, 23, 78]
+#my_list = [10, 45, 2, 99, 78] 
+#largest_num = max(my_list) 
+#print("The largest number is {}.".format(largest_num)) 
+#
+##Alternative approach:
+#
+#def largest_number(num):
+#    largest = 0  
+#    for i in num:
+#        if i > largest:
+#            largest = i 
+#    return largest 
+#
+#lar_num = largest_number(my_list) 
+#print("Second Approach: {}.".format(lar_num)) 
+#
+##Find the average number of alist using def and 
+##lambda function. 
+#
+#def average_num(num):
+#    average = sum(num) / len(num)
+#    return average 
+#lst = [2, 22, 14, 18, 88, 3] 
+#average_number = average_num(lst) 
+#print("The average number is {}.".format(average_number))
+#
+##Alternate Approach:
+#import statistics 
+#ave = statistics.mean(lst)
+#print("Alter nate approach: {}".format(ave))
+#
+##lambda function 
+#num1 = int(input("Enter the first number: ")) 
+#num2 = int(input("Enter the second number: "))
+#sum = lambda num1, num2: num1 + num2 
+#print(f"The sum of the numbers is {sum(num1, num2)}.") 
+
+#Find the average number of a llist using def
+# and lambda functions.
+import statistics 
+numbers = [10, 20, 30, 40, 50] 
+average = statistics.mean(numbers) 
+print("The average number is {}.".format(average)) 
+
+#Alternet Approach 
+def average_number(lst):
+    average = sum(lst) / len(lst) 
+    return average 
+
+ave = average_number(numbers) 
+print("Second Approach: {}.".format(round(ave))) 
+
+#Thrid Approach: lambda 
+ave_lam = lambda numbers: round(sum(numbers) / len(numbers))
+print("Third Approach: {}".format(ave_lam(numbers))) 
+
+
+#sum of n numbers:
+def sum_n(n):
+    sum = 0 
+    for i in range(1, n + 1):
+        sum += i 
+    return sum 
+result = sum_n(5) 
+print(f"The sum of the 5 is {result}.")
+
+
+#Check for prime numbers 
+
+prime_number = []  
+for num in range(2, 51):
+    is_prime = True
+    for i in range(2, int(num ** 0.5) + 1): 
+        if num % i == 0:
+            is_prime = False 
+            break 
+    
+    if is_prime:
+        prime_number.append(num)
+
+print(prime_number) 
