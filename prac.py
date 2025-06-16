@@ -2668,116 +2668,190 @@
 
 # print("The smallest number from the list is: {}".format(smallest)) 
 
-#### Set: Set:  ############################################################
-## unordered, immutable, and no duplication: ####################
-my_set = {1, 4, 2, 4, 3} 
-print(my_set) 
+# #### Set: Set:  ############################################################
+# ## unordered, immutable, and no duplication: ####################
+# my_set = {1, 4, 2, 4, 3} 
+# print(my_set) 
+# 
+# ## add() #####
+# add = my_set | {9}  
+# print("Add", add) 
+# 
+# add.add(10) 
+# print("Adding 10:", add) 
+# 
+# add.remove(2) 
+# print("2 is removed:", add) 
+# 
+# ## discard()  ###########
+# add.discard(10)
+# print("10 is discarded", add) 
+# 
+# ## updated() ## to add multiple elements #
+# add.update({14, 13})
+# print("13 and 14 have been updated:", add) 
+# 
+# ### pop() #### remove a random number 
+# add.pop() 
+# print("Removes a random number:", add) 
+# 
+# ## clear() ## clears the whole set ##
+# add.clear() 
+# print("add variable is empty now:", add) 
+# 
+# ############# Union Set: (|) OR union() #####################
+# num1 = {1, 3, 8, 6} 
+# num2 = {8, 9, 2, 6} 
+# 
+# my_union = num1 | num2 
+# print("Prints all the elements of num1 and num2 except duplication: ", my_union) 
+# 
+# ########## Set Intersection: (&) OR intersection() ######################
+# my_intersection = num1 & num2 
+# print("Prints only the common elements: ", my_intersection) 
+# 
+# 
+# ########### Set difference: (-) OR difference() ############### 
+# my_difference = num1 - num2 
+# print("Prints the elements which are subtracted from num2: ", my_difference) 
+# 
+# 
+# ####### Symmetric difference (^) or symmetric_difference ##############
+# my_symmetric_difference = num1 ^ num2 
+# print("Prints all the elements except the common ones: ", my_symmetric_difference) 
+# 
+# ten_things = "Apples Oranges Crows Telephone Light Sugar"
+# print("Wait there are not 10 things in that list. Let's fix that.") 
+# 
+# stuff = ten_things.split(' ')
+# more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
+# 
+# while len(stuff) != 10:
+#     next_one = more_stuff.pop() 
+#     print("Adding:", next_one) 
+#     stuff.append(next_one) 
+#     print("There are {} items now.".format(len(stuff))) 
+# 
+# print(f"There we go: ", stuff) 
+# print('Let\'s do something with stuff.') 
+# 
+# print(stuff[1]) 
+# print(stuff[-1]) 
+# print(stuff.pop()) 
+# print(' '.join(stuff)) 
+# print('#'.join(stuff[3:5])) 
+# 
+# 
+# 
+# #
+# words = "Apple Bananna Cherry Goava Phone Laptop"
+# my_words = words.split(' ') 
+# 
+# more_words = ['headphone', 'page', 'stickynote', 'cat', 'Larry'] 
+# 
+# while len(my_words) != 10:
+#     stuff = more_words.pop() 
+#     print("Adding: ", stuff) 
+#     my_words.append(stuff) 
+#     print(f"There are {len(my_words)} items now.") 
+#      
+# print(f"The 10 items are: ", my_words) 
+# print(my_words[1]) 
+# print(my_words[-1]) 
+# print(my_words.pop()) 
+# print(f"There are {len(my_words)} items now as we poped: {words}") 
+# print(' '.join(my_words)) 
+# print('#'.join(my_words[2:7])) 
+# 
+# 
+# #Exercise 38: 
+# some_words = "Phone Notepad Earphone Car Rat"
+# words = some_words.split() 
+# more_words = ["Ball", "Girl", "Party", "Book", "Most", "Hit"] 
+# 
+# while len(words) != 10:
+#     stuff = more_words.pop() 
+#     print("Adding: ", stuff) 
+#     words.append(stuff) 
+#     print(f"There are {len(words)} item now.") 
+# 
+# print("The {} words are {}.".format(len(words), words))
+# print(words[1]) 
+# print(words[-1]) 
+# print(words.pop()) 
+# print(' '.join(words)) 
+# print(' #'.join(words[2:7])) 
+# #Extracting a .zip file:
+# import zipfile 
+# file_name = input("File name to extract: ") 
+# 
+# with zipfile.ZipFile(file_name, 'r') as archive: 
+#     archive.extractall()
 
-## add() #####
-add = my_set | {9}  
-print("Add", add) 
+#create a mapping of state to abbreviation 
+states = {
+    'Oregon': 'OR',
+    'Florida': 'FL', 
+    'California': 'CA',
+    'New York': 'NY',
+    'Michigan': 'MI'
+}
 
-add.add(10) 
-print("Adding 10:", add) 
+#create a basic set of states and some cities in them 
+cities = {
+    'CA': 'San Francisco',
+    'MI': 'Detroit',
+    'FL': 'Jacksonville' 
+}
 
-add.remove(2) 
-print("2 is removed:", add) 
+#add some more cities 
+cities['NY'] = 'New York' 
+cities['OR'] = 'Portland' 
 
-## discard()  ###########
-add.discard(10)
-print("10 is discarded", add) 
+#print out some cities 
+print('-' * 10) 
 
-## updated() ## to add multiple elements #
-add.update({14, 13})
-print("13 and 14 have been updated:", add) 
+print("NY State has:", cities['NY']) 
+print("OR State has:", cities['OR']) 
 
-### pop() #### remove a random number 
-add.pop() 
-print("Removes a random number:", add) 
+#print some states 
+print('-' * 10) 
+print("Michigan's abbreviation is: ", states['Michigan']) 
+print("Florida's abbreviation is: ", states['Florida']) 
 
-## clear() ## clears the whole set ##
-add.clear() 
-print("add variable is empty now:", add) 
+#do it by using the state then cities dict 
+print('-' * 10) 
+print("Michigan has: ", cities[states['Michigan']]) 
+print("Florida has: ", cities[states['Florida']]) 
 
-############# Union Set: (|) OR union() #####################
-num1 = {1, 3, 8, 6} 
-num2 = {8, 9, 2, 6} 
+#print every state abbreviation 
+print('-' * 10) 
+for state, abbrev in list(states.items()): 
+    print(f"{state} is abbreaviated {abbrev}")  
 
-my_union = num1 | num2 
-print("Prints all the elements of num1 and num2 except duplication: ", my_union) 
+#print every city in state 
+print('-' * 10) 
+for abbrev, city in list(cities.items()):
+    print(f"{abbrev} has the city {city}") 
 
-########## Set Intersection: (&) OR intersection() ######################
-my_intersection = num1 & num2 
-print("Prints only the common elements: ", my_intersection) 
+#now do both at the same time
+print('-' * 10) 
+for state, abbrev in list(states.items()): 
+    print(f"{state} state is abbreviated {abbrev}") 
+    print(f"and has city {cities[abbrev]}")
 
+print('-' * 10) 
+# safely get a abbreviation by state that might not be there 
+state = states.get('Texas') 
 
-########### Set difference: (-) OR difference() ############### 
-my_difference = num1 - num2 
-print("Prints the elements which are subtracted from num2: ", my_difference) 
+if not state:
+    print("Sorry, no Texas.") 
 
+#get a city with a defaoult value 
+city = cities.get('TX', 'Does Not Exist') 
+print(f"The city for the state 'TX' is: {city}") 
 
-####### Symmetric difference (^) or symmetric_difference ##############
-my_symmetric_difference = num1 ^ num2 
-print("Prints all the elements except the common ones: ", my_symmetric_difference) 
-
-ten_things = "Apples Oranges Crows Telephone Light Sugar"
-print("Wait there are not 10 things in that list. Let's fix that.") 
-
-stuff = ten_things.split(' ')
-more_stuff = ["Day", "Night", "Song", "Frisbee", "Corn", "Banana", "Girl", "Boy"]
-
-while len(stuff) != 10:
-    next_one = more_stuff.pop() 
-    print("Adding:", next_one) 
-    stuff.append(next_one) 
-    print("There are {} items now.".format(len(stuff))) 
-
-print(f"There we go: ", stuff) 
-print('Let\'s do something with stuff.') 
-
-print(stuff[1]) 
-print(stuff[-1]) 
-print(stuff.pop()) 
-print(' '.join(stuff)) 
-print('#'.join(stuff[3:5])) 
-
-
-
-#
-words = "Apple Bananna Cherry Goava Phone Laptop"
-my_words = words.split(' ') 
-
-more_words = ['headphone', 'page', 'stickynote', 'cat', 'Larry'] 
-
-while len(my_words) != 10:
-    stuff = more_words.pop() 
-    print("Adding: ", stuff) 
-    my_words.append(stuff) 
-    print(f"There are {len(my_words)} items now.") 
-     
-print(f"The 10 items are: ", my_words) 
-print(my_words[1]) 
-print(my_words[-1]) 
-print(my_words.pop()) 
-print(f"There are {len(my_words)} items now as we poped: {words}") 
-print(' '.join(my_words)) 
-print('#'.join(my_words[2:7])) 
-
-
-#Exercise 38: 
-some_words = "Phone Notepad Earphone Car Rat"
-words = some_words.split() 
-more_words = ["Ball", "Girl", "Party", "Book", "Most", "Hit"] 
-
-while len(words) != 10:
-    stuff = more_words.pop() 
-    print("Adding: ", stuff) 
-    words.append(stuff) 
-    print(f"There are {len(words)} item now.") 
-
-print("The {} words are {}.".format(len(words), words))
-print(words[1]) 
-print(words[-1]) 
-print(words.pop()) 
-print(' '.join(words)) 
-print(' #'.join(words[2:7])) 
+#make a dictionary:
+for state, abbrev in list(states.items()):
+    print(f"{state} is abbreviated as {abbrev}.")
+    print(f"{state}: {abbrev}")   
