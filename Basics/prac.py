@@ -4208,47 +4208,578 @@ def print_first_and_last_sorted(sentence):
 #sum = lambda num1, num2: num1 + num2 
 #print(f"The sum of the numbers is {sum(num1, num2)}.") 
 
-#Find the average number of a llist using def
-# and lambda functions.
-import statistics 
-numbers = [10, 20, 30, 40, 50] 
-average = statistics.mean(numbers) 
-print("The average number is {}.".format(average)) 
+# #Find the average number of a llist using def
+# # and lambda functions.
+# import statistics 
+# numbers = [10, 20, 30, 40, 50] 
+# average = statistics.mean(numbers) 
+# print("The average number is {}.".format(average)) 
 
-#Alternet Approach 
-def average_number(lst):
-    average = sum(lst) / len(lst) 
-    return average 
+# #Alternet Approach 
+# def average_number(lst):
+#     average = sum(lst) / len(lst) 
+#     return average 
 
-ave = average_number(numbers) 
-print("Second Approach: {}.".format(round(ave))) 
+# ave = average_number(numbers) 
+# print("Second Approach: {}.".format(round(ave))) 
 
-#Thrid Approach: lambda 
-ave_lam = lambda numbers: round(sum(numbers) / len(numbers))
-print("Third Approach: {}".format(ave_lam(numbers))) 
-
-
-#sum of n numbers:
-def sum_n(n):
-    sum = 0 
-    for i in range(1, n + 1):
-        sum += i 
-    return sum 
-result = sum_n(5) 
-print(f"The sum of the 5 is {result}.")
+# #Thrid Approach: lambda 
+# ave_lam = lambda numbers: round(sum(numbers) / len(numbers))
+# print("Third Approach: {}".format(ave_lam(numbers))) 
 
 
-#Check for prime numbers 
+# #sum of n numbers:
+# def sum_n(n):
+#     sum = 0 
+#     for i in range(1, n + 1):
+#         sum += i 
+#     return sum 
+# result = sum_n(5) 
+# print(f"The sum of the 5 is {result}.")
 
-prime_number = []  
-for num in range(2, 51):
-    is_prime = True
-    for i in range(2, int(num ** 0.5) + 1): 
-        if num % i == 0:
-            is_prime = False 
-            break 
+
+# #Check for prime numbers 
+
+# prime_number = []  
+# for num in range(2, 51):
+#     is_prime = True
+#     for i in range(2, int(num ** 0.5) + 1): 
+#         if num % i == 0:
+#             is_prime = False 
+#             break 
     
-    if is_prime:
-        prime_number.append(num)
+#     if is_prime:
+#         prime_number.append(num)
 
-print(prime_number) 
+# print(prime_number) 
+
+##print even or odd numbers
+#def even_odd(num):
+#    if num % 2 == 0:
+#        print(f"The number {num} is an even number.")
+#    elif num % 2 != 0:
+#        print(f"The number {num} is an odd number.")
+#
+#number = int(input("Enter a number for even/odd: ")) 
+#even_odd(number) 
+#
+##Sum of Numbers from 1 to N.
+#def sum_numbers(nums):
+#    sum = 0
+#    for num in range(1, nums + 1):
+#        sum += num 
+#    return sum 
+#number = int(input("Enter a number for a sum of Nth number: "))
+#result = sum_numbers(number)
+#print("The sum of the numbers of {} is {}.".format(number, result))
+#
+#
+##Find the largest number from a list.
+#my_list = [22, 23, 88, 23, 8, 99]
+#largest = max(my_list) 
+#print(f"The largest number is {largest}.")
+#
+##Manually:
+#def largest_number(num):
+#    largest = 0 
+#    for number in num:
+#        if number > largest:
+#            largest = number  
+#    return largest 
+#
+#ints = [22, 23, 88, 23, 8, 99]
+#result = largest_number(ints)
+#print("The largest number is {}.".format(result))
+
+# #List of Prime Numbers 
+# #Use a loop and logic to store all prime numbers between 
+# #1 and 50 in a list.
+# 
+# prime_num = []
+# for num in range(2, 51):
+#     is_prime = True
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             is_prime = False 
+#             break
+# 
+#     if is_prime:
+#         prime_num.append(num) 
+# 
+# print("Prime numbers = {}".format(prime_num))  
+# 
+# #List of Prime Numbers:
+# #Use a loop and logic to store all prime numbers between
+# #1 ad 50 in a list.
+# 
+# prime_num = []
+# for num in range(2, 51):
+#     is_prime = True 
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0: #if remainders 0, not prime
+#             is_prime = False 
+#             break 
+# 
+#     if is_prime:
+#         prime_num.append(num)
+# 
+# print("The Prime Numbers: {}".format(prime_num))
+# 
+# #Write a program that takes an integer as input and checks
+# #whether it's a prime number.
+# prime_number = int(input("Enter a number to check whether it is a prime or not: "))
+# 
+# is_prime = True 
+# for num in range(2, int(prime_number ** 0.5) + 1):
+#     if prime_number % num == 0:
+#         is_prime = False 
+#         break 
+# 
+# if is_prime:
+#     print("{} is a prime number.".format(prime_number)) 
+# 
+# if not is_prime:
+#     print("{} is not a prime number.".format(prime_number))
+# 
+# #Reverse a String
+# #Write a function that takes a string and returns it reversed.
+# my_str = input("Enter something to reverse: ")
+# 
+# rever = my_str[::-1]
+# print(rever) 
+# 
+# #Count Vowels
+# #Write a program to count the 
+# #number of vowels in a given string.
+# 
+# word = input("Enter a sentence to count vowels: ")
+# 
+# def count_vowels(vol):
+#     vowels = "AEIOUaeiou"
+#     count = 0
+#     for char in vol:
+#         if char in vowels:
+#             count += 1
+# 
+#     return count 
+# 
+# result = count_vowels(word)
+# print("There are {} vowels in the given sentence.".format(result))
+
+##Fibonacci Sequence:
+##Write a function to print the first n numbers of the 
+##Fibonacci sequence.
+#def recursion(n):
+#    if n == 0:
+#        return 0
+#    elif n == 1:
+#        return 1
+#
+#    else:
+#        return recursion(n - 1) + recursion(n - 2) 
+#
+#num = int(input("Enter a number for Febonacci Sequence: "))
+##result = recursion(num)
+##print("Febonacci sequence: {}".format(result))  
+#for i in range(num + 1):
+#    print(recursion(i), end=' ')
+#print("\n")
+
+##Recursion Method 
+##Sum of a number:
+#int_num = int(input("Enter an integer for the sum of it: "))
+#def sum_num(num):
+#    if num == 0:
+#        return 0 
+#    else:
+#        return num + sum_num(num - 1) 
+#
+#for i in range(int_num + 1):
+#    print(sum_num(i), end=' ')  
+#
+##Factorial of a Number:
+## Write a program to calculate the factorial of a given
+##number using a for loop.
+#fact_num = int(input("\nEnter an integer to see its factorial: "))
+#
+#def factorial_num(num):
+#    if num == 1:
+#        return 1 
+#    else:
+#        return num * factorial_num(num - 1) 
+#result = factorial_num(fact_num) 
+#print("The factorial of {} is {}.".format(fact_num, result)) 
+#
+##List of Prime Numbers:
+##Use a loop and logic to store all prime numbers between 1
+## and 50 in a list.
+#
+#prime_num = []
+#for num in range(2, 51):
+#    is_prime = True 
+#    for i in range(2, int(num ** 0.5) + 1):
+#        if num % i == 0: #if divided by 0, not prime 
+#            is_prime = False 
+#            break 
+#
+#    if is_prime:
+#        prime_num.append(num) 
+#print("\nThe following are the prime numbers: \n{}".format(prime_num))
+
+##Reverse a string:
+#my_str = input("Enter anything to reverse: ") 
+#def reverse_str(x):
+#    return x[::-1] 
+#
+#result = reverse_str(my_str) 
+#print("\nThe reversed thing: {}".format(result))
+#
+##swap two variables:
+#a = 5
+#b = 10
+#a, b = b, a  
+#print("a = {} and b = {}".format(a, b))
+#
+##Convert temperature from Celsius to Fahrenheit 
+##Formula: F = C * 9/5 + 32 
+#def celsius_to_fahrenheit(cel):
+#    fehrenheit = cel * 9/5 + 32 
+#    return fehrenheit 
+#
+#celsius = int(input("Enter Celsius to convert to Fahrenheit: "))
+#result = celsius_to_fahrenheit(celsius)
+#print("So, {} celsius = {} fahrenheit".format(celsius, result))
+
+##Count Vowels in a string:
+#val = input("Enter a sentence to count vowels: ")
+#
+#def count_vowels(x):
+#    count = 0 
+#    vowels = "AEIOUaeiou"
+#    for char in x:
+#        if char == vowels:
+#            count += 1
+#    return count 
+#
+#result = count_vowels(val) 
+#print("There are {} vowels in the sentence.".format(result))  
+#
+##read a whole file then write to the file:
+#from sys import argv 
+#script, file_name = argv #user input 
+#
+#def read_whole_file(x):
+#    print(x.read()) 
+#
+#def rewind(x):
+#    x.seek(0) 
+#
+#def print_a_line(print_line, x):
+#    print(print_line, x.readline()) 
+#
+#target = open(file_name, 'r') #first open a file 
+#read_whole_file(target) 
+#
+#rewind(target) #take the cursor at the begining of the file
+#
+#for i in range(0, 6):
+#    print_a_line(i, target) 
+
+# #Find the average number of a list using def and lambda func.
+# my_list = [10, 20, 30, 40, 50, 60]
+# 
+# def average(x):
+#     ave = sum(x) / len(x)
+#     return ave 
+# 
+# result = average(my_list) 
+# print(result)  
+# 
+# #print the largest number from a list.
+# def largest_num(f):
+#     largest = max(f)
+#     return largest 
+# print(largest_num(my_list)) 
+# 
+# def lar(f):
+#     largest = 0
+#     for num in f:
+#         if num > largest:
+#             largest = num 
+#     return num 
+# 
+# result = lar(my_list) 
+
+#from sys import exit 
+#
+#def start():
+#    print("""
+#    You've entered in a dark room.
+#    There is a door to your left and right.
+#    Which one do you take?
+#
+#    """)
+#    choice = input('> ') 
+#
+#    if choice == "left":
+#        bear_room() 
+#    elif choice == "right":
+#        monster_room() 
+#    else:
+#        dead("You stumble around the dark room until you die.") 
+#
+#def dead(why):
+#    print(why, "Good Job!") 
+#    exit(0)
+#
+#def monster_room():
+#    print("The monster, whoever sees it goes insane.") 
+#    print("Do you flee from him or eat your head?")
+#
+#    choice = input("> ") 
+#
+#    if 'flee' in choice:
+#        start()
+#    elif 'head' in choice:
+#        dead("That was tasty!")
+#
+#def bear_room():
+#    print("""
+#    There is a bear here.
+#    The bear has a bunch of honey.
+#    The fat bear is in front of another door.
+#    How will you move the bear?
+#    """)
+#     
+#    bear_moved = False 
+#
+#    while True: 
+#        choice = input("> ")
+#        if choice == "take honey":
+#            print("The bear looks at you and slaps your face off.")
+#        elif choice == "taunt bear" and not bear_moved:
+#            print("The bear has moved from the door.")
+#            print("You can go through the door now.") 
+#            bear_moved = True 
+#        elif choice == "taunt bear" and bear_moved:
+#            dead("The bear gets pissed off and slaps you legs off.")
+#        elif choice == "open door" and bear_moved:
+#            gold_room() 
+#        else:
+#            dead("You stuck forever in the bear room.") 
+#
+#def gold_room():
+#    print("""
+#    The room is full of gold.
+#    How much do you take?
+#    """)
+#    choice = input("> ") 
+#
+#    if '0' in choice or '1' in choice:
+#        how_much = int(choice) 
+#    else:
+#        print("Man try to write something.") 
+#    
+#    if how_much < 50:
+#        print("Nice, you're not gready, you win!") 
+#        exit(0) 
+#    else:
+#        dead("You gready bastard!") 
+#start()
+
+
+#from sys import exit 
+#
+#def start():
+#    print("""
+#    You entered in a dark room.
+#    There is a door to your left and right.
+#    Which one do you take?
+#    """)
+#    choice = input("> ") 
+#
+#    if choice == "left":
+#        bear_room()
+#    elif choice == "right":
+#        monster_room() 
+#    else:
+#        dead("You stumble in the dark room and die.") 
+#
+#def dead(why):
+#    print(why, "Great job!")
+#    exit(0) 
+#
+#def bear_room():
+#    print("""
+#    There is a bear in front of the door.
+#    The bear has a bunch of honey.
+#    How do you move the bear?
+#    """)
+#
+#    bear_moved = False 
+#    while True:
+#        choice = input("> ")
+#        if choice == "take honey":
+#            dead("The bear looks at you and slaps your head off.")
+#        elif choice == "taunt bear" and not bear_moved:
+#            print("The bear moved and you can go through the door.") 
+#            bear_moved = True 
+#        elif choice == "taunt bear" and bear_moved:
+#            dead("The bear gets pissed off and chews your legs off.") 
+#        elif choice == "open door" and bear_moved:
+#            gold_room() 
+#        else:
+#            print("You stay forever in front of the bear room.") 
+#
+#
+#def monster_room():
+#    print("""
+#    You have entered into the monster's room, you look at him and go insane.
+#    Do you flee or eats you head?
+#    """)
+#    choice = input("> ") 
+#
+#    if 'flee' in choice:
+#        start()
+#    elif 'eat head' or 'head' in choice:
+#        dead("Tasty!") 
+#
+#def gold_room():
+#    print("""
+#    You have entered into a room that is full of gold.
+#    How much do you take?
+#    """)
+#    choice = input("> ")
+#    if '1' in choice or '0' in choice:
+#        how_much = int(choice) 
+#    else:
+#        print("Man, try to enter a number.")
+#    if how_much < 50:
+#        dead("You are not gready. You successfully finish the game.")
+#    else:
+#        print("You gready bastard!") 
+#        exit(0)
+#start()
+ 
+#from sys import exit
+#
+#def start():
+#    print("""
+#    You are in a dark room.
+#    There is a door to your right and left.
+#    Which one do you take?
+#    """)
+#    choice = input("> ") 
+#
+#    if choice == "right":
+#        bear_room() 
+#    elif choice == "left":
+#        monster_room()
+#    else:
+#        dead("You stumble around the room and die starving.")
+#
+#def dead(why):
+#    print(why, "Great job!")
+#    exit(0) 
+#
+#def bear_room():
+#    print("""
+#    There is a bear in front of the door.
+#    The bear has a bunch of honey.
+#    How do you move the bear?
+#    """)        
+#
+#    choice = input("> ") 
+#    bear_moved = False
+#    while True:
+#        if choice == "take honey":
+#            dead("The bear looks at you and slaps your face off.")
+#        elif choice == "taunt bear" and not bear_moved:
+#            print("The bear has moved.\nYou can go through it now.")
+#            bear_moved = True 
+#        elif choice == "taunt bear" and bear_moved:
+#            dead("The bear gets pissed off and chews you legs off.") 
+#        elif choice == "open door" and bear_moved:
+#            gold_room()
+#        else:
+#            print("You are stuck and the bear may eat you up any time.") 
+#
+#start()
+
+from sys import exit 
+
+def gold_room():
+    print("""
+    The room is full of gold.
+    How much do you take?
+    """)
+    choice = input("> ") 
+
+    if '0' in choice or '1' in choice:
+        how_much = int(choice) 
+    else:
+        print("Man try to enter a number.") 
+    if how_much < 50:
+        print("Nice! You are not greedy. Well done!") 
+        exit(0) 
+    else:
+        dead("You gready bastard!") 
+
+def bear_room():
+    print("""
+    There is a bear in front of the room with a bunch of honey.
+    How do you move the bear?
+    """)
+    bear_moved = False  
+
+    while True:
+        choice = input("> ") 
+        if choice == "take honey":
+            dead("The bear looks at you and slaps your face off.") 
+        elif choice == "taunt bear" and not bear_moved:
+            print("The bear has moved from the door.")
+            print("You may go through it now.")
+            bear_moved = True
+        elif choice == "taunt bear" and bear_moved:
+            dead("The bear gets pissed off and chews your legs off.")
+        elif choice == "open door" and bear_moved:
+            gold_room() 
+        else:
+            print("""
+            You are stuck in the bear room the bear might kill you any time.
+            """)
+
+def monster_room():
+    print("""
+    There is a monster in the room, if he stares at you\n you go insane.\nDo you flee or eat you head?
+    """)
+    choice = input("> ")
+    emh = "eat my head"
+    eh = "eat head"
+    if choice == "head" or choice == emh or choice == eh:
+        dead("That was tasty.")
+    elif choice == "flee":
+        start()
+    else:
+        monster_room() 
+
+def dead(why):
+    print(why, "Great job!") 
+    exit(0) 
+
+def start():
+    print("""
+    You are in a dark room.
+    There is a room on your left and right.
+    Which one do you take?
+    """)
+    choice = input("> ") 
+    
+    if choice == "left":
+        bear_room()
+    elif choice == "right":
+        monster_room() 
+    else:
+        dead("You stamble in the room until you die.") 
+
+start() 
