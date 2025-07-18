@@ -4706,80 +4706,146 @@ def print_first_and_last_sorted(sentence):
 #
 #start()
 
+#from sys import exit 
+#
+#def gold_room():
+#    print("""
+#    The room is full of gold.
+#    How much do you take?
+#    """)
+#    choice = input("> ") 
+#
+#    if '0' in choice or '1' in choice:
+#        how_much = int(choice) 
+#    else:
+#        print("Man try to enter a number.") 
+#    if how_much < 50:
+#        print("Nice! You are not greedy. Well done!") 
+#        exit(0) 
+#    else:
+#        dead("You gready bastard!") 
+#
+#def bear_room():
+#    print("""
+#    There is a bear in front of the room with a bunch of honey.
+#    How do you move the bear?
+#    """)
+#    bear_moved = False  
+#
+#    while True:
+#        choice = input("> ") 
+#        if choice == "take honey":
+#            dead("The bear looks at you and slaps your face off.") 
+#        elif choice == "taunt bear" and not bear_moved:
+#            print("The bear has moved from the door.")
+#            print("You may go through it now.")
+#            bear_moved = True
+#        elif choice == "taunt bear" and bear_moved:
+#            dead("The bear gets pissed off and chews your legs off.")
+#        elif choice == "open door" and bear_moved:
+#            gold_room() 
+#        else:
+#            print("""
+#            You are stuck in the bear room the bear might kill you any time.
+#            """)
+#
+#def monster_room():
+#    print("""
+#    There is a monster in the room, if he stares at you\n you go insane.\nDo you flee or eat you head?
+#    """)
+#    choice = input("> ")
+#    emh = "eat my head"
+#    eh = "eat head"
+#    if choice == "head" or choice == emh or choice == eh:
+#        dead("That was tasty.")
+#    elif choice == "flee":
+#        start()
+#    else:
+#        monster_room() 
+#
+#def dead(why):
+#    print(why, "Great job!") 
+#    exit(0) 
+#
+#def start():
+#    print("""
+#    You are in a dark room.
+#    There is a room on your left and right.
+#    Which one do you take?
+#    """)
+#    choice = input("> ") 
+#    
+#    if choice == "left":
+#        bear_room()
+#    elif choice == "right":
+#        monster_room() 
+#    else:
+#        dead("You stamble in the room until you die.") 
+#
+#start() 
+
 from sys import exit 
 
-def gold_room():
-    print("""
-    The room is full of gold.
-    How much do you take?
-    """)
-    choice = input("> ") 
-
-    if '0' in choice or '1' in choice:
-        how_much = int(choice) 
-    else:
-        print("Man try to enter a number.") 
-    if how_much < 50:
-        print("Nice! You are not greedy. Well done!") 
-        exit(0) 
-    else:
-        dead("You gready bastard!") 
-
-def bear_room():
-    print("""
-    There is a bear in front of the room with a bunch of honey.
-    How do you move the bear?
-    """)
-    bear_moved = False  
-
-    while True:
-        choice = input("> ") 
-        if choice == "take honey":
-            dead("The bear looks at you and slaps your face off.") 
-        elif choice == "taunt bear" and not bear_moved:
-            print("The bear has moved from the door.")
-            print("You may go through it now.")
-            bear_moved = True
-        elif choice == "taunt bear" and bear_moved:
-            dead("The bear gets pissed off and chews your legs off.")
-        elif choice == "open door" and bear_moved:
-            gold_room() 
-        else:
-            print("""
-            You are stuck in the bear room the bear might kill you any time.
-            """)
-
-def monster_room():
-    print("""
-    There is a monster in the room, if he stares at you\n you go insane.\nDo you flee or eat you head?
-    """)
-    choice = input("> ")
-    emh = "eat my head"
-    eh = "eat head"
-    if choice == "head" or choice == emh or choice == eh:
-        dead("That was tasty.")
-    elif choice == "flee":
-        start()
-    else:
-        monster_room() 
-
-def dead(why):
-    print(why, "Great job!") 
-    exit(0) 
-
 def start():
-    print("""
-    You are in a dark room.
-    There is a room on your left and right.
-    Which one do you take?
-    """)
-    choice = input("> ") 
+    print("You are in a dark room./nThere is a door on you left and right.\nWhich one do you take?")
+    choice = input("> ")
     
     if choice == "left":
         bear_room()
-    elif choice == "right":
+    elif choice == 'right':
         monster_room() 
     else:
-        dead("You stamble in the room until you die.") 
+        dead("You stumble in the room until you die.")
 
-start() 
+def dead(why):
+    print(why, "Great job!")
+    exit(0)
+
+def bear_room():
+    print("There is a bear in front of the door with a bunch of honey.\nHow will you move the bear?")
+
+    bear_moved = False 
+    while True:
+        choice = input("> ")
+
+        if choice == "take honey":
+            dead("The bear looks at you and slaps you face off.")
+        elif choice == "taunt bear" and not bear_moved:
+            print("The bear moved and you can go through it now.")
+            bear_moved = True 
+        elif choice == "taunt bear" and bear_moved:
+            dead("The bear gets pissed off and chews you legs off.") 
+        elif choice == "open door" and bear_moved:
+            gold_room() 
+        else:
+            dead("The bear somehow eats you up.") 
+
+def gold_room():
+    print("The room is full of gold. How much do you take?")
+
+    choice = input("> ") 
+
+    if '1' in choice or '0' in choice:
+        how_much = int(choice) 
+    else:
+        dead("Man, try to enter a number.") 
+    
+    if how_much < 50:
+        print("Well done! You are not greedy. You win!") 
+        exit(0)
+    else:
+        dead("You greedy bastard!") 
+
+def monster_room():
+    print("There is a monster, if stares at you, you go insane.")
+    print("Do you flee or eat your head?")
+    choice = input("> ") 
+
+    if choice == "flee":
+        star()
+    elif choice == "eat head":
+        dead("That was tasty!") 
+    else:
+        monster_room()
+
+start()
