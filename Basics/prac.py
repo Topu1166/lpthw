@@ -4870,3 +4870,20 @@ print("Let\'s see the elements without brackets: {}.".format(", ".join(sp_things
 print("Let\'s use the same thing with a pound/hash sign (#): {}".format(sp_things[2:6])) 
 
 
+# Another approach of the above code:f
+words = "All things are new"
+split_words = words.split()
+more_words = ["time", "Cat", "bread", "Rony", "Peter", "orenge ", "mat", "bat", "lady"]
+
+while len(split_words) != 10:
+    new_item = more_words.pop()
+    print("Adding: ", new_item) 
+    split_words.append(new_item)
+    print("There are {} items now.".format(len(split_words))) 
+
+print("Let's do something with split_words: ")
+
+print("Let's print the first element: ", split_words[0])
+print("Second 3rd element: {}".format(split_words[2])) 
+print("All elements: {}".format(", ".join(split_words))) 
+print("Some of the elements: {}".format(" #".join(split_words[2:6])))
