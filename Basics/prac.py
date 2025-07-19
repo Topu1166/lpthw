@@ -4784,68 +4784,89 @@ def print_first_and_last_sorted(sentence):
 #
 #start() 
 
-from sys import exit 
+#from sys import exit 
+#
+#def start():
+#    print("You are in a dark room./nThere is a door on you left and right.\nWhich one do you take?")
+#    choice = input("> ")
+#    
+#    if choice == "left":
+#        bear_room()
+#    elif choice == 'right':
+#        monster_room() 
+#    else:
+#        dead("You stumble in the room until you die.")
+#
+#def dead(why):
+#    print(why, "Great job!")
+#    exit(0)
+#
+#def bear_room():
+#    print("There is a bear in front of the door with a bunch of honey.\nHow will you move the bear?")
+#
+#    bear_moved = False 
+#    while True:
+#        choice = input("> ")
+#
+#        if choice == "take honey":
+#            dead("The bear looks at you and slaps you face off.")
+#        elif choice == "taunt bear" and not bear_moved:
+#            print("The bear moved and you can go through it now.")
+#            bear_moved = True 
+#        elif choice == "taunt bear" and bear_moved:
+#            dead("The bear gets pissed off and chews you legs off.") 
+#        elif choice == "open door" and bear_moved:
+#            gold_room() 
+#        else:
+#            dead("The bear somehow eats you up.") 
+#
+#def gold_room():
+#    print("The room is full of gold. How much do you take?")
+#
+#    choice = input("> ") 
+#
+#    if '1' in choice or '0' in choice:
+#        how_much = int(choice) 
+#    else:
+#        dead("Man, try to enter a number.") 
+#    
+#    if how_much < 50:
+#        print("Well done! You are not greedy. You win!") 
+#        exit(0)
+#    else:
+#        dead("You greedy bastard!") 
+#
+#def monster_room():
+#    print("There is a monster, if stares at you, you go insane.")
+#    print("Do you flee or eat your head?")
+#    choice = input("> ") 
+#
+#    if choice == "flee":
+#        star()
+#    elif choice == "eat head":
+#        dead("That was tasty!") 
+#    else:
+#        monster_room()
+#
+#start()
 
-def start():
-    print("You are in a dark room./nThere is a door on you left and right.\nWhich one do you take?")
-    choice = input("> ")
-    
-    if choice == "left":
-        bear_room()
-    elif choice == 'right':
-        monster_room() 
-    else:
-        dead("You stumble in the room until you die.")
+things = "Table phone glass pen eight"
+sp_things = things.split(" ")
+more_items = ['Goava', "Mango", "Vice", "Below", "Cabin", "Michael", "Molly"]
 
-def dead(why):
-    print(why, "Great job!")
-    exit(0)
+while len(sp_things) != 10:
+    new_item = more_items.pop() 
+    print("Adding: ", new_item)
+    sp_things.append(new_item)
+    print("We have {} item now.".format(len(sp_things))) 
 
-def bear_room():
-    print("There is a bear in front of the door with a bunch of honey.\nHow will you move the bear?")
+print("There we go: ", sp_things)
+print("Let's do something with the \'sp_things\'.") 
 
-    bear_moved = False 
-    while True:
-        choice = input("> ")
+print("The second element: {}".format(sp_things[1]))
+print("The first item: {}".format(sp_things[0]))
+print("A random element: {}".format(sp_things.pop()))
+print("Let\'s see the elements without brackets: {}.".format(", ".join(sp_things)))
+print("Let\'s use the same thing with a pound/hash sign (#): {}".format(sp_things[2:6])) 
 
-        if choice == "take honey":
-            dead("The bear looks at you and slaps you face off.")
-        elif choice == "taunt bear" and not bear_moved:
-            print("The bear moved and you can go through it now.")
-            bear_moved = True 
-        elif choice == "taunt bear" and bear_moved:
-            dead("The bear gets pissed off and chews you legs off.") 
-        elif choice == "open door" and bear_moved:
-            gold_room() 
-        else:
-            dead("The bear somehow eats you up.") 
 
-def gold_room():
-    print("The room is full of gold. How much do you take?")
-
-    choice = input("> ") 
-
-    if '1' in choice or '0' in choice:
-        how_much = int(choice) 
-    else:
-        dead("Man, try to enter a number.") 
-    
-    if how_much < 50:
-        print("Well done! You are not greedy. You win!") 
-        exit(0)
-    else:
-        dead("You greedy bastard!") 
-
-def monster_room():
-    print("There is a monster, if stares at you, you go insane.")
-    print("Do you flee or eat your head?")
-    choice = input("> ") 
-
-    if choice == "flee":
-        star()
-    elif choice == "eat head":
-        dead("That was tasty!") 
-    else:
-        monster_room()
-
-start()
