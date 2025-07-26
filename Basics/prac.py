@@ -4887,3 +4887,69 @@ print("Let's print the first element: ", split_words[0])
 print("Second 3rd element: {}".format(split_words[2])) 
 print("All elements: {}".format(", ".join(split_words))) 
 print("Some of the elements: {}".format(" #".join(split_words[2:6])))
+
+
+#10 examples of things in the real world that would 
+#fit in a list. 
+fruits = ["kiewi", "mango", "strawberry", "lichi"]
+for fruit in fruits:
+    print(f"I like {fruit}.")
+
+#2. 
+tasks = ['read books', 'revision', 'goin to office', "listening to music"]
+for task in tasks:
+    print("Today's task: {}.".format(task))
+
+#3.
+car_brands = ["Toyota", "Ford", "Tesla", "Honda", "Kia", "Audi", "Mercedes", "Nissan"]
+for brand in car_brands:
+    if brand.startswith("T"):
+        print("I use {}.".format(brand))
+
+#4.
+colors = ["red", 'yellow', 'black', 'blue', 'green']
+for color in colors:
+    print(color) 
+
+#5.
+favorite_songs = ["Litle Miss Muffet", "The World Between Us", "Perfect"]
+for song in favorite_songs:
+    print("My favorite song is {}.".format(song))
+
+#6. 
+Book_title = ["Master Your Emotions", "How to read faster"]
+for title in Book_title:
+    print("Favorite book is {}.".format(title)) 
+
+#7.
+city_name = ["Texas", "New York", "Missorrie", "Messachussets"]
+for city in city_name:
+    print(city) 
+
+#8.
+grocery_list = ["Tomato", "eggplant", "okra", "spinach"]
+for veggi in grocery_list:
+    print(veggi)
+
+#9.
+days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Fridy', "Saturday"]
+for day in days:
+    print(day)
+
+#10.
+visit_country = ["USA", "Australia", "Germany", "Netherland", "China", "Japan"]
+for country in visit_country:
+    print("I want to visit {}.".format(country)) 
+
+vegetables = ["eggplant", "cucumber", "onion", 'pumkin']
+veggi = 0
+
+while veggi < len(vegetables):
+    print(f"I need to buy: {vegetables[veggi]}.") 
+    veggi += 1 
+
+favorite_books = ["Time Magazine", "Master You Emotion", "Junior English"]
+books = 0 
+while books < len(favorite_books):
+    print(f"My favorite book is {favorite_books[books]}")
+    books += 1 
