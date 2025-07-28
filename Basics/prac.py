@@ -4850,106 +4850,206 @@ def print_first_and_last_sorted(sentence):
 #
 #start()
 
-things = "Table phone glass pen eight"
-sp_things = things.split(" ")
-more_items = ['Goava', "Mango", "Vice", "Below", "Cabin", "Michael", "Molly"]
+# things = "Table phone glass pen eight"
+# sp_things = things.split(" ")
+# more_items = ['Goava', "Mango", "Vice", "Below", "Cabin", "Michael", "Molly"]
+# 
+# while len(sp_things) != 10:
+#     new_item = more_items.pop() 
+#     print("Adding: ", new_item)
+#     sp_things.append(new_item)
+#     print("We have {} item now.".format(len(sp_things))) 
+# 
+# print("There we go: ", sp_things)
+# print("Let's do something with the \'sp_things\'.") 
+# 
+# print("The second element: {}".format(sp_things[1]))
+# print("The first item: {}".format(sp_things[0]))
+# print("A random element: {}".format(sp_things.pop()))
+# print("Let\'s see the elements without brackets: {}.".format(", ".join(sp_things)))
+# print("Let\'s use the same thing with a pound/hash sign (#): {}".format(sp_things[2:6])) 
+# 
+# 
+# # Another approach of the above code:f
+# words = "All things are new"
+# split_words = words.split()
+# more_words = ["time", "Cat", "bread", "Rony", "Peter", "orenge ", "mat", "bat", "lady"]
+# 
+# while len(split_words) != 10:
+#     new_item = more_words.pop()
+#     print("Adding: ", new_item) 
+#     split_words.append(new_item)
+#     print("There are {} items now.".format(len(split_words))) 
+# 
+# print("Let's do something with split_words: ")
+# 
+# print("Let's print the first element: ", split_words[0])
+# print("Second 3rd element: {}".format(split_words[2])) 
+# print("All elements: {}".format(", ".join(split_words))) 
+# print("Some of the elements: {}".format(" #".join(split_words[2:6])))
+# 
+# 
+# #10 examples of things in the real world that would 
+# #fit in a list. 
+# fruits = ["kiewi", "mango", "strawberry", "lichi"]
+# for fruit in fruits:
+#     print(f"I like {fruit}.")
+# 
+# #2. 
+# tasks = ['read books', 'revision', 'goin to office', "listening to music"]
+# for task in tasks:
+#     print("Today's task: {}.".format(task))
+# 
+# #3.
+# car_brands = ["Toyota", "Ford", "Tesla", "Honda", "Kia", "Audi", "Mercedes", "Nissan"]
+# for brand in car_brands:
+#     if brand.startswith("T"):
+#         print("I use {}.".format(brand))
+# 
+# #4.
+# colors = ["red", 'yellow', 'black', 'blue', 'green']
+# for color in colors:
+#     print(color) 
+# 
+# #5.
+# favorite_songs = ["Litle Miss Muffet", "The World Between Us", "Perfect"]
+# for song in favorite_songs:
+#     print("My favorite song is {}.".format(song))
+# 
+# #6. 
+# Book_title = ["Master Your Emotions", "How to read faster"]
+# for title in Book_title:
+#     print("Favorite book is {}.".format(title)) 
+# 
+# #7.
+# city_name = ["Texas", "New York", "Missorrie", "Messachussets"]
+# for city in city_name:
+#     print(city) 
+# 
+# #8.
+# grocery_list = ["Tomato", "eggplant", "okra", "spinach"]
+# for veggi in grocery_list:
+#     print(veggi)
+# 
+# #9.
+# days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Fridy', "Saturday"]
+# for day in days:
+#     print(day)
+# 
+# #10.
+# visit_country = ["USA", "Australia", "Germany", "Netherland", "China", "Japan"]
+# for country in visit_country:
+#     print("I want to visit {}.".format(country)) 
+# 
+# vegetables = ["eggplant", "cucumber", "onion", 'pumkin']
+# veggi = 0
+# 
+# while veggi < len(vegetables):
+#     print(f"I need to buy: {vegetables[veggi]}.") 
+#     veggi += 1 
+# 
+# favorite_books = ["Time Magazine", "Master You Emotion", "Junior English"]
+# books = 0 
+# while books < len(favorite_books):
+#     print(f"My favorite book is {favorite_books[books]}")
+#     books += 1 
 
-while len(sp_things) != 10:
-    new_item = more_items.pop() 
-    print("Adding: ", new_item)
-    sp_things.append(new_item)
-    print("We have {} item now.".format(len(sp_things))) 
-
-print("There we go: ", sp_things)
-print("Let's do something with the \'sp_things\'.") 
-
-print("The second element: {}".format(sp_things[1]))
-print("The first item: {}".format(sp_things[0]))
-print("A random element: {}".format(sp_things.pop()))
-print("Let\'s see the elements without brackets: {}.".format(", ".join(sp_things)))
-print("Let\'s use the same thing with a pound/hash sign (#): {}".format(sp_things[2:6])) 
+mystuff = {'apples': "I am apples."} 
+print(mystuff['apples']) 
 
 
-# Another approach of the above code:f
-words = "All things are new"
-split_words = words.split()
-more_words = ["time", "Cat", "bread", "Rony", "Peter", "orenge ", "mat", "bat", "lady"]
+import mystuff 
+mystuff.apple() 
 
-while len(split_words) != 10:
-    new_item = more_words.pop()
-    print("Adding: ", new_item) 
-    split_words.append(new_item)
-    print("There are {} items now.".format(len(split_words))) 
+print(mystuff.tangerine) 
 
-print("Let's do something with split_words: ")
+#7/26/2025 #Modules are like dictionaries #Classes are like dictionaries 
+class MyStuff(object):
 
-print("Let's print the first element: ", split_words[0])
-print("Second 3rd element: {}".format(split_words[2])) 
-print("All elements: {}".format(", ".join(split_words))) 
-print("Some of the elements: {}".format(" #".join(split_words[2:6])))
+    def __init__(self):
+        self.tangerine = "And now a thousand years between" 
+
+    def apple(self):
+        print("I AM CLASSY APPLES.") 
+
+thing = MyStuff()
+thing.apple() 
+print(thing.tangerine) 
 
 
-#10 examples of things in the real world that would 
-#fit in a list. 
-fruits = ["kiewi", "mango", "strawberry", "lichi"]
-for fruit in fruits:
-    print(f"I like {fruit}.")
+#Make of your own 
+class demo(object):
 
-#2. 
-tasks = ['read books', 'revision', 'goin to office', "listening to music"]
-for task in tasks:
-    print("Today's task: {}.".format(task))
+    def __init__(self):
+        self.a_sentence = "I love to code."
 
-#3.
-car_brands = ["Toyota", "Ford", "Tesla", "Honda", "Kia", "Audi", "Mercedes", "Nissan"]
-for brand in car_brands:
-    if brand.startswith("T"):
-        print("I use {}.".format(brand))
+    def addi(self, num1, num2):
+        return num1 + num2 
 
-#4.
-colors = ["red", 'yellow', 'black', 'blue', 'green']
-for color in colors:
-    print(color) 
+result = demo() #instantiate the class
+print(result.addi(3, 2)) # call the method
+print(result.a_sentence) #access the instance variable 
 
-#5.
-favorite_songs = ["Litle Miss Muffet", "The World Between Us", "Perfect"]
-for song in favorite_songs:
-    print("My favorite song is {}.".format(song))
+#let's create another one
+class fruits(object):
+    
+    def __init__(self):
+        self.fruit = "Mango is a name of a fruit."
 
-#6. 
-Book_title = ["Master Your Emotions", "How to read faster"]
-for title in Book_title:
-    print("Favorite book is {}.".format(title)) 
+    def multiply(self, num1, num2):
+        return num1 * num2 
 
-#7.
-city_name = ["Texas", "New York", "Missorrie", "Messachussets"]
-for city in city_name:
-    print(city) 
+rslt = fruits() #instantiate the class
+print(rslt.multiply(3, 4)) #called the method 
+print(rslt.fruit) #access the instance variable 
 
-#8.
-grocery_list = ["Tomato", "eggplant", "okra", "spinach"]
-for veggi in grocery_list:
-    print(veggi)
+class MyClass:
+    
+    def say_hello(self):
+        print("Hello!") 
 
-#9.
-days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Fridy', "Saturday"]
-for day in days:
-    print(day)
+rslt = MyClass() #instantiation of the class
+print(rslt.say_hello()) #calls the method 
 
-#10.
-visit_country = ["USA", "Australia", "Germany", "Netherland", "China", "Japan"]
-for country in visit_country:
-    print("I want to visit {}.".format(country)) 
+#Exercise: 40 
+class Song(object):
 
-vegetables = ["eggplant", "cucumber", "onion", 'pumkin']
-veggi = 0
+    def __init__(self, lyrics): #__init__() carries the data
+        self.lyrics = lyrics 
 
-while veggi < len(vegetables):
-    print(f"I need to buy: {vegetables[veggi]}.") 
-    veggi += 1 
+    def sing_me_a_song(self): #Method
+        for line in self.lyrics:
+            print(line) 
+        
+happy_bday = Song([
+    "Happy birthday to you",
+    "I don't want to get sued",
+    "So I'll stop right there"
+])
 
-favorite_books = ["Time Magazine", "Master You Emotion", "Junior English"]
-books = 0 
-while books < len(favorite_books):
-    print(f"My favorite book is {favorite_books[books]}")
-    books += 1 
+bulls_on_parade = Song([
+    "They rally around tha family",
+    "With pockets full of shells"
+])
+
+happy_bday.sing_me_a_song() 
+bulls_on_parade.sing_me_a_song() 
+
+class Song(object):
+
+    def __init__(self):
+        self.lyrics = [
+            "There is a ship;",
+            "Floating in the sea.",
+            "Captain of the ship;",
+            "James Cook."
+        ]
+    
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line) 
+
+sea = Song() #instantiate the class 
+sea.sing_me_a_song() 
+
+#
