@@ -48,3 +48,5 @@ OR, Remove-Item "C:\Path\To\Folder" -Recurse -Force
     (Force Delete (No Prompts or Errors))
 
 9. rm .hiddenfile OR rm -rf .hiddenfolder/ (Delete Hidden Files) 
+
+why does the instagram log out automatically?
