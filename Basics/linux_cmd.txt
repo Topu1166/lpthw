@@ -1,0 +1,84 @@
+1. Terminal & Navigation 
+| Task                     | Command                                         | Notes                                             |
+| ------------------------ | ----------------------------------------------- | ------------------------------------------------- |
+| Print working directory  | `pwd`                                           | Shows where you are                               |
+| List files/folders       | `ls`                                            | `ls -l` for details, `ls -a` to show hidden files |
+| Change directory         | `cd /path/to/folder`                            | Example: `cd ~/Documents`                         |
+| Go back one level        | `cd ..`                                         | Moves to parent folder                            |
+| Go to home directory     | `cd ~` or `cd`                                  | Shortcut to your home folder                      |
+| Tree view of directories | `tree` *(install with `sudo apt install tree`)* | Optional, visual folder structure                 |
+Navigate to your home folder.
+List all files, including hidden ones. 
+Create a folder called security_practice in Documents. 
+
+1. Project : Create a directory structure like /home/you/projects/security/, move files around, and document what you did.
+2. Project : Map your home network (find devices using arp -a or nmap).: Create a new user, set permissions so only that user can read a file.
+3. Project : Write a simple script that monitors CPU usage and logs it every 10 seconds.
+4. Project : Write a script that updates your system, checks disk usage, and emails/logs results.
+5. Project : Map your home network (find devices using arp -a or nmap).
+6. Project : Capture DNS traffic using Wireshark while browsing websites.
+7. Project : Configure SSH so it only allows key-based login, block password login.
+8. Project : Scan your own machine with nmap and document open ports.
+9. Project : Hash a password with SHA256, then crack it with John the Ripper.
+10. Project : Perform a basic XSS test on DVWA (safe, legal lab).
+11. Project : Write a script that watches /var/log/auth.log and alerts on failed login attempts.
+12. Project : Complete at least 3 OverTheWire Bandit challenges.
+
+2. File & Folder Management 
+| Task          | Command                   | Notes                        |
+| ------------- | ------------------------- | ---------------------------- |
+| Create file   | `touch filename.txt`      | Creates empty file           |
+| Create folder | `mkdir foldername`        | Example: `mkdir test_folder` |
+| Move file     | `mv file.txt foldername/` | Move `file.txt` into folder  |
+| Copy file     | `cp file.txt copy.txt`    | Make a copy of file          |
+| Delete file   | `rm filename.txt`         | Be careful, no recycle bin!  |
+| Delete folder | `rm -r foldername`        | Recursively deletes folder   |
+
+Exercise:
+Inside security_practice, create a file called notes.txt. 
+Copy it as notes_backup.txt.
+Move both files to a subfolder texts. 
+Delete the original notes.txt.
+
+3. Viewing Files 
+| Task                   | Command         | Notes                                      |
+| ---------------------- | --------------- | ------------------------------------------ |
+| View entire file       | `cat filename`  | Prints content to terminal                 |
+| View file page by page | `less filename` | Scroll with arrow keys, `q` to quit        |
+| View first 10 lines    | `head filename` | `head -n 20 filename` shows first 20 lines |
+| View last 10 lines     | `tail filename` | `tail -f filename` shows live updates      |
+
+Exercise:
+Open your notes_backup.txt with less.
+Add some text using namo notes_backup.txt and then 
+view the first/last lines.
+
+4. Searching & Finding 
+| Task                 | Command                                                                            | Notes                     |
+| -------------------- | ---------------------------------------------------------------------------------- | ------------------------- |
+| Search text in file  | `grep "text" filename`                                                             | Case-sensitive by default |
+| Search files/folders | `find . -name "filename"`                                                          | `.` = current folder      |
+| Locate files         | `locate filename` *(install with `sudo apt install mlocate` then `sudo updatedb`)* | Fast search database      |
+
+Exercise:
+Search for the word "Ubuntu" inside your notes file using grep.
+Find the security_practice folder from home using find.
+
+5. System Info Basics 
+| Task              | Command             | Notes                                           |
+| ----------------- | ------------------- | ----------------------------------------------- |
+| Check disk usage  | `df -h`             | Human-readable format                           |
+| Check folder size | `du -sh foldername` | Example: `du -sh ~/Documents/security_practice` |
+| Check memory      | `free -h`           | Human-readable format                           |
+| Check uptime      | `uptime`            | How long system has been running                |
+
+Exercise:
+Check how much space security_practice uses.
+Check available RAM system uptime. 
+
+#### Extra Tips for Week 1 
+(a) Try using tab completion: type part of a command or 
+    filename and press Tab to auto-pomplete.
+(b) Use man <command> to read the manual. Example: man ls. 
+(c) Practice these commands daily for at least 30-60 min. 
+    Muscle memory is key. 
