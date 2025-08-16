@@ -98,3 +98,6 @@ set expandtab
 let g:AutoPairs = {'(':')', '[':']', '{':'}', "'":"'", '"':'"', '`':'`'}
 let g:AutoPairsShortcutToggle = '<M-p>'
 "@ | Out-File $env:USERPROFILE\_vimrc -Encoding utf8
+
+#To indent:
+select then < / > to tab in or out 

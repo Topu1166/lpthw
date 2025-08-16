@@ -1,4 +1,4 @@
-# ################## Reading from a file using argv and input function: ###################
+# ################## Rtading from a file using argv and input function: ###################
 # from sys import argv
 # script, file_name = argv 
 
@@ -4954,102 +4954,191 @@ def print_first_and_last_sorted(sentence):
 #     print(f"My favorite book is {favorite_books[books]}")
 #     books += 1 
 
-mystuff = {'apples': "I am apples."} 
-print(mystuff['apples']) 
+#mystuff = {'apples': "I am apples."} 
+#print(mystuff['apples']) 
+#
+#
+#import mystuff 
+#mystuff.apple() 
+#
+#print(mystuff.tangerine) 
+#
+##7/26/2025 #Modules are like dictionaries #Classes are like dictionaries 
+#class MyStuff(object):
+#
+#    def __init__(self):
+#        self.tangerine = "And now a thousand years between" 
+#
+#    def apple(self):
+#        print("I AM CLASSY APPLES.") 
+#
+#thing = MyStuff()
+#thing.apple() 
+#print(thing.tangerine) 
+#
+#
+##Make of your own 
+#class demo(object):
+#
+#    def __init__(self):
+#        self.a_sentence = "I love to code."
+#
+#    def addi(self, num1, num2):
+#        return num1 + num2 
+#
+#result = demo() #instantiate the class
+#print(result.addi(3, 2)) # call the method
+#print(result.a_sentence) #access the instance variable 
+#
+##let's create another one
+#class fruits(object):
+#    
+#    def __init__(self):
+#        self.fruit = "Mango is a name of a fruit."
+#
+#    def multiply(self, num1, num2):
+#        return num1 * num2 
+#
+#rslt = fruits() #instantiate the class
+#print(rslt.multiply(3, 4)) #called the method 
+#print(rslt.fruit) #access the instance variable 
+#
+#class MyClass:
+#    
+#    def say_hello(self):
+#        print("Hello!") 
+#
+#rslt = MyClass() #instantiation of the class
+#print(rslt.say_hello()) #calls the method 
+#
+##Exercise: 40 
+#class Song(object):
+#
+#    def __init__(self, lyrics): #__init__() carries the data
+#        self.lyrics = lyrics 
+#
+#    def sing_me_a_song(self): #Method
+#        for line in self.lyrics:
+#            print(line) 
+#        
+#happy_bday = Song([
+#    "Happy birthday to you",
+#    "I don't want to get sued",
+#    "So I'll stop right there"
+#])
+#
+#bulls_on_parade = Song([
+#    "They rally around tha family",
+#    "With pockets full of shells"
+#])
+#
+#happy_bday.sing_me_a_song() 
+#bulls_on_parade.sing_me_a_song() 
+#
+#class Song(object):
+#
+#    def __init__(self):
+#        self.lyrics = [
+#            "There is a ship;",
+#            "Floating in the sea.",
+#            "Captain of the ship;",
+#            "James Cook."
+#        ]
+#    
+#    def sing_me_a_song(self):
+#        for line in self.lyrics:
+#            print(line) 
+#
+#sea = Song() #instantiate the class 
+#sea.sing_me_a_song() 
+#
+##Exercise:40 
+#class Song(object):
+#
+#    def __init__(self, lyrics):
+#        self.lyrics = lyrics 
+#
+#    def sing_me_a_song(self):
+#        for line in self.lyrics:
+#            print(line) 
+#
+#happy_bday = Song([
+#    "Happy birthday to you!",
+#    "Happy birthday to you!",
+#    "Happy birthday to you!", 
+#    "Dear Mcanzie." 
+#])
+#wish = Song([
+#    "Wish you a very long and happy life.",
+#    "Wish you be a great coder someday."
+#])
+#
+#happy_bday.sing_me_a_song() 
+#wish.sing_me_a_song() 
 
+#Write a python program to reverse a list without 
+#using reverse() or slicing. (Bonus Challenge)
+# def reverse_a_list(arg1):
+#     length = len(arg1)
+#     the_list = len(arg1)
+#     for num in str(the_list):
+#         for j in str(the_list) - num -1:
+#             j[0], j[-1] = j[-1], j[0] 
+# 
+#     return arg1 
+# 
+# my_list = [0, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+# result = reverse_a_list(my_list)
+# print("Original list: ", my_list)
+# print("Reversed list: ", result) 
 
-import mystuff 
-mystuff.apple() 
-
-print(mystuff.tangerine) 
-
-#7/26/2025 #Modules are like dictionaries #Classes are like dictionaries 
-class MyStuff(object):
-
+class my_class(object):
     def __init__(self):
-        self.tangerine = "And now a thousand years between" 
+        self.tangerine = "Are you there?"
 
     def apple(self):
-        print("I AM CLASSY APPLES.") 
+        print("Learn Python The Hard Way 3.")
 
-thing = MyStuff()
+thing = my_class() #An object or instance  
 thing.apple() 
 print(thing.tangerine) 
 
+#reverse a list:
+def reverse_list(f):
+    return f[:: -1] 
 
-#Make of your own 
-class demo(object):
+my_list = ['orange', 'cat', 'yellow', 'bag', 'rat', 'bat']
+rslt = reverse_list(my_list) 
+print(rslt)
 
-    def __init__(self):
-        self.a_sentence = "I love to code."
+print(reversed(my_list)) 
 
-    def addi(self, num1, num2):
-        return num1 + num2 
+#Sum of Numbers from 1 to N
+#Write a program that takes a number N and prints the sum 
+#of all numbers from 1 to N.
+a_num = int(input("Enter a number to know the sum of it: "))
 
-result = demo() #instantiate the class
-print(result.addi(3, 2)) # call the method
-print(result.a_sentence) #access the instance variable 
+def sum_num(num):
+    sum = 0 
+    for i in range(0, num + 1):
+        sum += i 
+    return sum 
 
-#let's create another one
-class fruits(object):
-    
-    def __init__(self):
-        self.fruit = "Mango is a name of a fruit."
+reslt = sum_num(a_num) 
+print(f"The sum of the number is {reslt}.")     
 
-    def multiply(self, num1, num2):
-        return num1 * num2 
+#Use a loop and logic to store all prime numbers between 
+#1 and 50 in a list.
 
-rslt = fruits() #instantiate the class
-print(rslt.multiply(3, 4)) #called the method 
-print(rslt.fruit) #access the instance variable 
+prime_numbers = [] 
+is_prime = True 
+for i in range(2, 51):
+    for j in range(2, int(i ** 0.5) + 1):
+        if i % 2 == 0:
+            is_prime = False
+            break 
 
-class MyClass:
-    
-    def say_hello(self):
-        print("Hello!") 
+if is_prime:
+    prime_numbers.append(i)
 
-rslt = MyClass() #instantiation of the class
-print(rslt.say_hello()) #calls the method 
-
-#Exercise: 40 
-class Song(object):
-
-    def __init__(self, lyrics): #__init__() carries the data
-        self.lyrics = lyrics 
-
-    def sing_me_a_song(self): #Method
-        for line in self.lyrics:
-            print(line) 
-        
-happy_bday = Song([
-    "Happy birthday to you",
-    "I don't want to get sued",
-    "So I'll stop right there"
-])
-
-bulls_on_parade = Song([
-    "They rally around tha family",
-    "With pockets full of shells"
-])
-
-happy_bday.sing_me_a_song() 
-bulls_on_parade.sing_me_a_song() 
-
-class Song(object):
-
-    def __init__(self):
-        self.lyrics = [
-            "There is a ship;",
-            "Floating in the sea.",
-            "Captain of the ship;",
-            "James Cook."
-        ]
-    
-    def sing_me_a_song(self):
-        for line in self.lyrics:
-            print(line) 
-
-sea = Song() #instantiate the class 
-sea.sing_me_a_song() 
-
-#
+print(prime_numbers)  
