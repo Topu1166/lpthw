@@ -1,4 +1,4 @@
-(1) ====== PowerShell Commands ======
+ ====== PowerShell Commands ======
 
 -Force (deletes hidden, read-only, or system files or folders.)
 -confirm (gives a prompt to delete or not) 

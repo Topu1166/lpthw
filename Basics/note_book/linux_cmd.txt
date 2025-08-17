@@ -7,6 +7,11 @@
 | Go back one level        | `cd ..`                                         | Moves to parent folder                            |
 | Go to home directory     | `cd ~` or `cd`                                  | Shortcut to your home folder                      |
 | Tree view of directories | `tree` *(install with `sudo apt install tree`)* | Optional, visual folder structure                 |
+
+mkdir -p project/securite
+-p → parent, creates all necessary parent directories
+ if they don’t exist.
+
 Navigate to your home folder.
 List all files, including hidden ones. 
 Create a folder called security_practice in Documents. 

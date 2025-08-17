@@ -1,2 +1,0 @@
-1. start-process powershell -Verb RunAs
-2. systeminfo | Select-String "Hyper-V" -AllMatches 
