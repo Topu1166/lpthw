@@ -48,5 +48,15 @@ OR, Remove-Item "C:\Path\To\Folder" -Recurse -Force
     (Force Delete (No Prompts or Errors))
 
 9. rm .hiddenfile OR rm -rf .hiddenfolder/ (Delete Hidden Files) 
+10. sudo apt remove libreoffice*
+11. sudo apt auto remove 
+12. sudo apt purge libreoffice*
+13. sudo apt autoremove 
+purge removes packages AND configuration files
 
+remove removes packages but keeps configuration files
+
+autoremove removes unused dependencies that were installed with LibreOffice
+
+The purge command is recommended if you want a clean removal and don't plan to reinstall LibreOffice with the same settings.
 why does the instagram log out automatically?
