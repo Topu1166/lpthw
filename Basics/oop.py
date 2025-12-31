@@ -51,7 +51,7 @@
 class Cat():
     
     def __init__(self):
-        self.word = "Look! This is so tasty."
+        word = "Look! This is so tasty."
 
     def ant():
         print("The ants live in the sand.")
@@ -64,5 +64,108 @@ class Animal(Cat): #Cat is-a Animal
         print("Do you fish everyday?") 
 
 thing = Animal() #instanciate/ object 
-thing.catch 
-thing.fish 
+print(thing.catch)
+#thing.fish()  
+
+def apple():
+    print("I am apples!")
+
+
+
+##Exercise 40:
+#class band(object):
+#    
+#    def __init__(self, lyrics):
+#        self.lyrics = lyrics 
+#
+#    def sing_a_song(self):
+#        for line in self.lyrics:
+#            print(line) 
+#
+#first_song = band(["If you miss the train I'm on,",
+#                   "You will know that I'm gone.",
+#                   "You can hear the whistle blow,",
+#                   "A hundred miles away."]) 
+#
+#second_song = band(["Every night in my dreams,",
+#                    "I see you, I feel you.",
+#                    "You have come to see me,", 
+#                    "Go on!"]) 
+#
+#first_song.sing_a_song() 
+#second_song.sing_a_song() 
+
+
+class x(object):
+    def __init__(self):
+        print("x is a class.") 
+
+class y(object):
+    def __init__(self):
+        print('y is a class.') 
+
+
+class a(x): #a is-a x 
+    def __init__(self):
+        super().__init__() #calls x's construction 
+        self.y = y() #composition: a has-a x 
+        print('x is initialized.') 
+
+
+obj = a() 
+
+#class 
+class Song(object):
+
+    def __init__(self, lyrics):
+        self.lyrics = lyrics 
+
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line) 
+
+
+first_song = Song(["If you miss the train I'm on",
+                   "You will know that I'm gone.",
+                   "You can hear the wistle blow,", 
+                   "A hundred miles."])  
+
+second_song = Song(["One day I'm gonna fly away,",
+                    "One day when haven close my name,", 
+                    "I lay I close my eyes at night,", 
+                    "I can see moon and light."]) 
+
+print("---" * 10) 
+first_song.sing_me_a_song()
+print("---" * 10) 
+second_song.sing_me_a_song() 
+
+
+#Dictionary 
+fruits = {'Cherry': 'Tastes delicious!'} 
+print('---' * 10) 
+print(fruits['Cherry'])  
+
+
+#Import 
+import mystuff 
+
+print("---" * 10) 
+mystuff.apple() 
+print("---" * 10) 
+print(mystuff.tangerine) 
+
+#Class #Doing the same thing 
+class mystuff(object):
+
+    def __init__(self):
+        self.tangerine = "Is it gonna happen." 
+
+    def orange(self):
+        print("It looks orange in color with a round shape.") 
+
+result = mystuff()
+print('---' * 10)
+result.orange() 
+print('---' * 10) 
+print(result.tangerine) 
