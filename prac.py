@@ -2789,69 +2789,107 @@
 #     archive.extractall()
 
 #create a mapping of state to abbreviation 
-states = {
-    'Oregon': 'OR',
-    'Florida': 'FL', 
-    'California': 'CA',
-    'New York': 'NY',
-    'Michigan': 'MI'
-}
+# states = {
+#     'Oregon': 'OR',
+#     'Florida': 'FL', 
+#     'California': 'CA',
+#     'New York': 'NY',
+#     'Michigan': 'MI'
+# }
+# 
+# #create a basic set of states and some cities in them 
+# cities = {
+#     'CA': 'San Francisco',
+#     'MI': 'Detroit',
+#     'FL': 'Jacksonville' 
+# }
+# 
+# #add some more cities 
+# cities['NY'] = 'New York' 
+# cities['OR'] = 'Portland' 
+# 
+# #print out some cities 
+# print('-' * 10) 
+# 
+# print("NY State has:", cities['NY']) 
+# print("OR State has:", cities['OR']) 
+# 
+# #print some states 
+# print('-' * 10) 
+# print("Michigan's abbreviation is: ", states['Michigan']) 
+# print("Florida's abbreviation is: ", states['Florida']) 
+# 
+# #do it by using the state then cities dict 
+# print('-' * 10) 
+# print("Michigan has: ", cities[states['Michigan']]) 
+# print("Florida has: ", cities[states['Florida']]) 
+# 
+# #print every state abbreviation 
+# print('-' * 10) 
+# for state, abbrev in list(states.items()): 
+#     print(f"{state} is abbreaviated {abbrev}")  
+# 
+# #print every city in state 
+# print('-' * 10) 
+# for abbrev, city in list(cities.items()):
+#     print(f"{abbrev} has the city {city}") 
+# 
+# #now do both at the same time
+# print('-' * 10) 
+# for state, abbrev in list(states.items()): 
+#     print(f"{state} state is abbreviated {abbrev}") 
+#     print(f"and has city {cities[abbrev]}")
+# 
+# print('-' * 10) 
+# # safely get a abbreviation by state that might not be there 
+# state = states.get('Texas') 
+# 
+# if not state:
+#     print("Sorry, no Texas.") 
+# 
+# #get a city with a defaoult value 
+# city = cities.get('TX', 'Does Not Exist') 
+# print(f"The city for the state 'TX' is: {city}") 
+# 
+# #make a dictionary:
+# for state, abbrev in list(states.items()):
+#     print(f"{state} is abbreviated as {abbrev}.")
+#     print(f"{state}: {abbrev}")   i
 
-#create a basic set of states and some cities in them 
-cities = {
-    'CA': 'San Francisco',
-    'MI': 'Detroit',
-    'FL': 'Jacksonville' 
-}
+#Reading files using two inputs: 
+from sys import argv 
+script, file_name = argv 
 
-#add some more cities 
-cities['NY'] = 'New York' 
-cities['OR'] = 'Portland' 
+target = open(file_name, 'r') 
+print("Here is your file {}.".format(file_name)) 
+print(target.read())
+target.close() 
+print(script) 
 
-#print out some cities 
-print('-' * 10) 
+#Using input function 
+fileName = input("Enter a file name to read: ") 
+red = open(fileName, 'r+') 
+print("Here's your file {}:".format(fileName)) 
+print(red.read()) 
 
-print("NY State has:", cities['NY']) 
-print("OR State has:", cities['OR']) 
+print("We're going to erase the file.") 
+print("If you don't want it, press ctrl + C to quit.") 
+print("Or if you want, press Enter.") 
 
-#print some states 
-print('-' * 10) 
-print("Michigan's abbreviation is: ", states['Michigan']) 
-print("Florida's abbreviation is: ", states['Florida']) 
+input('? ') 
 
-#do it by using the state then cities dict 
-print('-' * 10) 
-print("Michigan has: ", cities[states['Michigan']]) 
-print("Florida has: ", cities[states['Florida']]) 
+print("Opening the file...... ") 
+print("Truncating the file. Goodbye!") 
+red.seek(0) #move pointer to beginning before truncating 
+red.truncate() 
 
-#print every state abbreviation 
-print('-' * 10) 
-for state, abbrev in list(states.items()): 
-    print(f"{state} is abbreaviated {abbrev}")  
+print("Now I'm goint to ask you for three lines.") 
 
-#print every city in state 
-print('-' * 10) 
-for abbrev, city in list(cities.items()):
-    print(f"{abbrev} has the city {city}") 
+line1 = input("line 1: ") 
+line2 = input("line 2: ") 
+line3 = input("line 3: ") 
 
-#now do both at the same time
-print('-' * 10) 
-for state, abbrev in list(states.items()): 
-    print(f"{state} state is abbreviated {abbrev}") 
-    print(f"and has city {cities[abbrev]}")
+print("I'm going to write these to the file.") 
 
-print('-' * 10) 
-# safely get a abbreviation by state that might not be there 
-state = states.get('Texas') 
-
-if not state:
-    print("Sorry, no Texas.") 
-
-#get a city with a defaoult value 
-city = cities.get('TX', 'Does Not Exist') 
-print(f"The city for the state 'TX' is: {city}") 
-
-#make a dictionary:
-for state, abbrev in list(states.items()):
-    print(f"{state} is abbreviated as {abbrev}.")
-    print(f"{state}: {abbrev}")   
+red.write(f"{line1}\n{line2}\n{line3}\n") 
+red.close() 

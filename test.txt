@@ -1,9 +1,6 @@
-Hi, there!
-How's it going?
-How much do you need?
+Is it gonna now?
+What do you think?
+I think it's gonna work now. 
 
-
-#### Lets's type something new here: ####
-
-Let's have some fun typing 
-some new texts.
+I just want to add some new texts 
+using redirects (>>). 
