@@ -1,0 +1,8 @@
+# Nmap 7.98 scan initiated Thu Feb 12 00:21:49 2026 as: /usr/lib/nmap/nmap --privileged -sT -p 1433 -oG MicrosoftSQL 192.168.0.0-255/24
+Host: 192.168.0.1 ()	Status: Up
+Host: 192.168.0.1 ()	Ports: 1433/closed/tcp//ms-sql-s///
+Host: 192.168.0.100 ()	Status: Up
+Host: 192.168.0.100 ()	Ports: 1433/closed/tcp//ms-sql-s///
+Host: 192.168.0.103 ()	Status: Up
+Host: 192.168.0.103 ()	Ports: 1433/closed/tcp//ms-sql-s///
+# Nmap done at Thu Feb 12 00:21:53 2026 -- 256 IP addresses (3 hosts up) scanned in 4.14 seconds

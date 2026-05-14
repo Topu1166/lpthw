@@ -1,0 +1,1 @@
+Host: 192.168.1.1 ()	Ports: 22/open/tcp//ssh//OpenSSH 6.6.0 (protocol 2.0)/, 53/open/tcp//domain//dnsmasq 2.92rc1 (pi-hole)/, 80/open/tcp//http//TP-LINK router http config/, 1900/open/tcp//upnp//TP-LINK router upnpd/	Ignored State: filtered (996)

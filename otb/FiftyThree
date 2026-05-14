@@ -1,0 +1,8 @@
+# Nmap 7.98 scan initiated Wed Feb 11 23:44:58 2026 as: /usr/lib/nmap/nmap --privileged -sT -p 53 -oG FiftyThree 192.168.0.0-
+Host: 192.168.0.1 ()	Status: Up
+Host: 192.168.0.1 ()	Ports: 53/open/tcp//domain///
+Host: 192.168.0.100 ()	Status: Up
+Host: 192.168.0.100 ()	Ports: 53/closed/tcp//domain///
+Host: 192.168.0.103 ()	Status: Up
+Host: 192.168.0.103 ()	Ports: 53/closed/tcp//domain///
+# Nmap done at Wed Feb 11 23:45:03 2026 -- 256 IP addresses (3 hosts up) scanned in 5.06 seconds
