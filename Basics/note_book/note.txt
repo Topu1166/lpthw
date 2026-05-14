@@ -1,0 +1,20 @@
+####For encoding and decoding: ####
+errors='ignore' / errors='replace' ## any one of them can be used
+
+### Methods for Lists: ####
+1. List:
+print(fruits[::2]) for every second elements
+a. print(dir(fruits)) shows methods
+b. print(help(fruits)) attributes and methods of a list
+c. print(len(fruits)) length of a list/collection 
+d. print("apple" in fruits) shows boolean 
+
+######## METHOS ####
+  .append() = add elements at the end of the list
+  .remove(apple) = remove an element 
+  .insert(0, "pineapple") = insert a value at a given index 
+  .sort() = sort a list in alphabetical order
+  .reverse() =
+  .clear() = clears the list 
+  .index() = shows the index,  like: the number 0 index, or 1, 2 etc  print(fruits.count("bananna")) = counts how many banannas there      are in the list 
+

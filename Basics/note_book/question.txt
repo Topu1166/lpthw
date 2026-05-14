@@ -1,0 +1,56 @@
+#### List: ############
+1. Write a Python program to create a list with the numbers 1 to 5 and
+   print it. 
+2. Given the list below, print the third element. 
+3. Change the second element of the list below to "grape" and print the 
+   updated list.
+4. Add 'orange' to the end of the list below. 
+5. Remove 'blue from the list below and print the updated list.
+6. Given the list below, print the first three elements using slicing. 
+7. Write a for loop to print each element of the list below. 
+8. Check if 'apple' exists in the list below and print True or False.
+9. Sort the list below in asscending order and print it.
+10. Create a new list containing the squares o numbers from 1 to 5 using
+    list comprehension
+11. Write a Python program to reverse a list without using reverse() or
+    slicing. (Bonus Challenge) 
+12. Write a Python program to remove duplicate elements from the list 
+    below and print the updated list. numbers = [1, 2, 2, 3, 4, 4, 5] 
+13. Write a Python program to find and print the largest number from the 
+    list below. values = [10, 45, 2, 99, 23, 78] 
+
+14. Find the average number of a list using def and lambda functions.
+15.Find even number using a list comprehension. even_num = [expression  for item in iterable if condition] 
+
+################################################
+Python Practice Questions:
+1. Even or Odd
+Write a program that asks the user to enter a number and prints whether it is even or odd.
+
+2. Sum of Numbers from 1 to N
+Write a program that takes a number n and prints the sum of all numbers from 1 to n.
+
+3. Find the Largest Number
+Given a list of numbers: [4, 9, 1, 22, 17], write code to find the largest number.
+
+4. Check for Prime Number
+Write a program that takes an integer as input and checks whether it's a prime number.
+
+5. Reverse a String
+Write a function that takes a string and returns it reversed (e.g., "hello" → "olleh").
+
+6. Count Vowels
+Write a program to count the number of vowels in a given string.
+
+7. Fibonacci Sequence
+Write a function to print the first n numbers of the Fibonacci sequence.
+
+8. Factorial of a Number
+Write a program to calculate the factorial of a given number using a for loop.
+
+9. List of Prime Numbers (1–50)
+Use a loop and logic to store all prime numbers between 1 and 50 in a list.
+
+10. Check for Palindrome
+Write a function that checks whether a word (like "madam" or "racecar") is a palindrome.
+

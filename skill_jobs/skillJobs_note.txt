@@ -1,0 +1,355 @@
+#08-03-2026 
+
+Time/Task Management
+Organization will judge by efficiency. 
+hard skill: as a software engineer if you could do the work (practically)
+softskill: presentation/organize 
+Set priority: Which job must be done first
+
+#Prioritizing Tasks: The Eisenhower Matrix 
+ 1. When the tast comes, write it down. 
+    (i) You have 20 tasks, now priorize them from more important to less. 
+    (ii) Delete them which might be not import at all(becomes 15) 
+    (iii) Delegate: Let other people do if possible 
+    (iv) Decide: Schedule a time to do it later. 
+    (v) Do: Do it right away. 
+# Microsoft To Do list: Save/write the tasks to be reminded
+Cause Porfessional people lists things 
+
+#################### NEXT CLASS ###############
+Microsoft To Do(In the Next Class, remind him)
+
+
+# 09-03-2026 
+Must learn Networking 
+Protect all the digital assets of an organizations
+
+data = anything like . , :
+information = a set of meaningful data 
+
+digital assets= networks, computer, server, etc.
+
+Direct services for users = various applications/services
+indirect Infrastructure service = Background services 
+
+#Next Class: Two kinds of  Storages
+Data Center:
+On-Premise Infrastructure and Cloud Infrastructure 
+
+On-Premise Infrastructure 
+What do we need:
+1. power
+2. internet 
+3. cooling environment (PAC precision air condition) 
+
+
+Passive Part(Tier): Rack/Rack Server & PAC 
+1. Raised floor (Perforated tiles/ precision air condition)
+2. Bricks wall (Colore must be Fire rated cause color may not melt)
+3. Conduct Work (Cabling Tray, Ladder, etc.)
+4. Glass (must be 10-15mm thick) Firated glass
+5. Ramp 
+6. Door (Firated door, a data center must have two doors)
+7. PAC must be two at least (8 hrs x 8 hrs) ATS(Time)=> automatically switch the PAC, one for 8hrs and then another for 8hrs. SNMP = sends messages to administrator if anything happens.  
+
+POWER MANAGEMENT:    
+1. DB board-2/ SDB-2/Online UPS-2, REB, Factory Generator, Dedicated Gen for DCPower Insfrastucture for a data center 
+2. .1ohm grounding (to save from thunderstrom) very costly/deep 100meter) 
+Data center never shutdowns. 
+
+Argon gas, 10-15mm glass, 2 layers of glass, temperature/sound/air/gas cannot pass 
+
+
+#2026/03/30 
+#Email Ethics (Mastering Corporate & Email Ethics)  
+#Soft Skill 
+Understanding Corporate Ethics:
+1. Confidentiality 
+2. Conflict of Interest 
+3. Ethical Breach 
+You cannot share company's data.
+
+#Basics of Email Ethics 
+1. Clear Subject Lines 
+2. Professional Tone (Respectful and courteous) 
+3. Respect for Time (concise and brief)
+
+#Golden Rules of Email Commmunication
+Write/speak in Active not in Passive. 
+
+Email's standard form is 12. 
+Don't use any emoji. 
+plain text 
+Email News letter (Edit with image/picture along with text.)
+
+
+2026/04/05 
+
+1. Network
+   a. Core Switch >> Connectivity hub for distribution Switches 
+   b. Distribution Switch >> End Device Connectivity 
+   c. Router > IP Address Translator/Configure >Router e NAT thake 
+    Router er kaj ki? IP address translator 
+    Public IP er jonno pay korte hoy ISP ke.ISP pays >IIG AND IIG PAYS>ICANN.
+    Private ip toiri korar karon, public ip onek khoroch hoi r risk beshi thake
+    je prithibir jekono jaiga theke access kora jabe. Public Ip directly bebohar kora hoi na karon security risk thake. Globally availably howar karone protect kora dificult hobe. 
+   d. Firewall > Network Protection/Filters the traffic  
+   e. Servers > Tower Server > Rack Mounted Server > Blade Server  
+   f. Storage > NAS/SAN (Network-Attached Storage/Storage Area Network) 
+    (i) NAS is user for Local Area Network whereas SAN is used for big network 
+    where there are branches of network
+   g. Access Point >> The service of wifi is known as access point 
+
+ISP = Internet Service Provider 
+IIG = International Internet Gateway 
+ICANN = Internet Corporation for Assigned Names and Numbers 
+UTP = Unshield Twisted Pair Cable Cat6, cat5, catagory5,6 (know about UTP) 
+UTP should be 70-80 meters long to make it work properply. 
+UTP cable er kaj ki? 
+utp cable er copper er purity er upor depend korbe connection kemon hobe. 
+pair1= audio (Know about what each pair can do)
+access point ceilling e lagano thake (know about access point)
+PoE = Power over ethernet (Rj45) 
+DVR = Direct Video Recorder camera lagano jai. Ei device theke line jete hobe. 
+NVR = Network Video Recoder/
+Network switch PoE thakte hobe. (camera/cctv/router/server etc lagano jai.)
+
+celling mount accessing point >> needs power 
+4 pairs of cable in UTP = 
+1 pair supplies power, audio voice transfer, videos,
+Router = (NAT) Network Address Translator 
+PoE = Power over ethernet 
+
+ISP theke jokhon connection nibo tokhon following jinish gulo boshate hobe:
+Following information ISP provide korbe:
+IP Address:
+Subnet Mask:
+Gateway:
+DNS-1 (Primary DNS) 8.8.8.8
+DNS-2 (Secondary DNS) 4.4.4.4 
+
+Then Local IP: ############## S U B N E T  M A S K ############## 
+192.168.1.1 (Ei ip addressing gulo kivabe type C ip guloke calculate kora hoy.)
+255.255.255.0 (Subnet mask ki? Keno bebohar kora hoy? Kivabe caculation hoy?)
+DHCP = Dynamic Host Control Protocol > Sets the settings and connects automatically 
+DHCP jokhon configure korbo amra tokhon onek gulo bishoy mathai rakte hobe:
+dhcp configure er shomoy mention korte hobe je ami koto gulo device maximum configure korte chai. 
+Eije maximum number of device onushare configure korte hobe; subnet mask boshate hobe. >>Jodi maximum device unlimited kore dei tahole hacker ra projonto IP address free pabe o tara tader device ke connect kore ekhane attact korbe. 
+>>Nyom holo proyojoner otirikto IP address jeno free na thake shei bhabe configure kora.
+DHCP configure er shomoy ekta feature ache: Lease: 1 week/2 hrs/4hrs
+Assume je ekta share network ache jemon printer. Printer er ip fixed 
+hote hobe. >>Fixed device/ba kono server er ip always fixed hote hobe. To er jono ache Mac bind: Device bind korte pari
+Assume kori je company te 28 ta ip ache o 28 ta ip occupied. Ekhon 
+companir md sir ashlo, ip to occupied uni connect korte parbe na. Toh 
+solution holo: Reservation bole ekta term ache. Reserve kore rakhle oi
+ip onake chara connect hobe na. >>Jokhon device thakbe na tokhon oi ip
+onno kew nite parbe na, oita free e thakbe shobshomoy. 
+########################## A C C E S S   P O I N T ###################################
+Internet
+   |
+Router
+   |
+PoE Switch
+   |
+-------------------------
+|     |     |     |
+AP1   AP2   AP3   AP4  
+Used in office, school, hotel, hospital.
+
+Final Summary
+
+Organizations use access points instead of multiple routers because:
+
+Routers create new networks
+Access points extend the same network
+Multiple routers cause Double NAT
+Access points provide better Wi-Fi coverage
+Access points are easier to manage and cheaper
+This design is standard in enterprise networking 
+
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+############################2026/04/13 ################################################
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZUR
+
+2026/04/13 
+Why the whole world goes to cloude Insfrastracture?
+
+365 Microsoft Insfrastracture 
+Pay as you go model 
+Microsoft Azure Clude
+
+Virtualization is more effictive than Physical 
+AWS, ORACLE, MICROSOFT, AZURE 
+
+
+##########################2026/04/20 ###############################
+Technician 
+Engineers (kaj hobe configure kora, application login, ip, domain, alignment, confi
+guration related kaj)
+
+Administration (Security component, radio device, throught software or physically monitoring each and every network) 
+
+Architect (maps the whole network structure) 
+
+############
+ROI = Return on Investment
+opex =
+capex =
+
+27 april 2026 
+################################ L I N U X ##################### 
+Official Version of Linux is Red Hat Linux. 
+(root@kali)-[~] 
+root = super user - has full previllege 
+kali = hostname / computer name 
+#- supuer user
+$- normal user
+ 
+ cal 
+rwx- owner rwx- permitted user rwx- others 
+File Permission- 777-rwx
+
+May 5 2026
+Know about kiss principal: 
+Communication:
+1. Clarity 
+2. Conciseness
+3. Correctness 
+4. Courtesy 
+5. Coherence
+6. Completeness
+7. Consistency
+memo= money receit 
+reports & Proposal = report of something
+Agreement & Contacts
+News Letter & Notice
+Meeting Minutes is very important.
+1. Attandance 
+2. What are the topics
+3. 
+
+
+
+############# WOULD YOU MAKE US UNDERSTAND WHAT READ, WRITE, AND EXECUTION MEAN? ############## 
+############# You wanted us to count and sum up the numbers of the links but why? ###############
+############# In the book it's said rwxrwxrwx owner, group, and others ###########
+############# /etc/passwd can be changed and given permission with chmod, so why should we use SUID? ##########################
+
+

@@ -1,0 +1,50 @@
+# Set: #################
+### A set is unordered,immutable but some says mutable no duplicates
+### A set is mutable in the sence that you can add and remove  
+1. buit-in-function is 'set()' ### 
+
+## Methods: ###
+2. add() ## add a single item
+3. remove() ## remove items and raise an 'error'
+4. discard() ## removes items and shows 
+5. update() ## update multiple items/elements
+            ##the update method take lists, tuple, strings as an argument
+6. pop()   ## removes a random element from a set and return it as Output
+7. clear()  ## clears all the elements from a set. 
+
+####### Sets in Python are similar to set in mathematics: ###########
+
+### Set Union: ###### means all elements except the common ones ###
+9.  pipe (|) operator /OR/ union() method ## Like: A | B OR A.union(B) 
+
+### Set Intersection: ##### means only the common ones ####
+10. ampersand (&) operator /OR/ intersection() method ##Like: A & B 
+    OR A.intersection(B) 
+
+###Set Difference: ###### means only the difference 
+11. Like: A - B OR A.difference(B)
+
+### Set Symmetric Difference ##### means all items except the common ones
+12. Like: A ^ B OR A.symmetric_difference(B) 
+
+13. Subset => When every elements of A/variable is in B/variable
+    A = {1, 2} and B = {1, 2, 3, 4} # print(A.issubset(B)) # True 
+
+14. Superset => When it contains all elements of A 
+    B.issuper(A) ## True 
+###################### QUESTIONS: #####################
+
+
+# 1. Create a set from a list of numbers with duplicates. 
+# 2. Find the union of two sets.
+# 3. Add an element to a set. 
+# 4. Remove an element from a set. 
+# 5. Check if a value exists in a set.
+# 6. Convert a string to a set of unique characters. 
+# Interdediate Level: 
+# 7. Find the intersection of two sets. 
+# 8. Find the union of two sets.
+# 9. Find the difference between two sets. 
+# 10. Check if a set is a subset of another. 
+# 11. Check is a set is a superset of another. 
+# 12

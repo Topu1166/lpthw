@@ -1,0 +1,1 @@
+kali:$y$j9T$4zmyB6rnsAPugENFaJatS1$qjhzGAp0FZkxpN5X7xIOSbp0Zed2IkzlsnaYK0buNqC:1000:1000:kali,,,:/home/kali:/bin/bash

@@ -1,0 +1,18 @@
+### List: Methods #######
+# Collection = single "variable" used to store multiple values
+# list       = [] ordered and changeable. Dupliates Ok
+# set        = {} unordered and immutable/unchangeable, but add/remove
+               Ok, No Duplicates
+# Tuple      = () ordered and unchangeable. Duplicates Ok, Faster 
+
+#############################################################
+
+1. .append() = add an element at the end of a list
+2. .extend() = add each element from an iterable to the end of the list
+3. .insert() = insert an element at a specified index in the list
+4. .pop()    = remove and return an element at a specified index 
+               (default is the last element) 
+5. .clear()  = remove/clear all the elements from a list
+6. .copy()   = create a shallow copy of the list
+7. .remove() = remove the frist occurance of a specified element from
+               the list 

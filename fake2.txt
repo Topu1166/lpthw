@@ -1,0 +1,19 @@
+Kermola = 45.250.229.44 /desktop-hj8uua1\user
+
+Santos = 103.40.167.40 /desktop-9n2lg1a\santo 
+
+103.115.156.30
+103.115.156.24
+
+tor = https://blog.torproject.org/introducing-oniux-tor-isolation-using-linux-namespaces/ 
+
+gobuster link = go install github.com/OJ/gobuster/v3@latest
+wordlist link = git clone https://github.com/danielmiessler/SecLists.git
+it being one of the most famous wordlist
+collections in use today.
+This line must be erased.
+This is  only for practice using cat >> ./lpthw/fake.txt 
+Delete this line.
+word1
+word2
+word3
