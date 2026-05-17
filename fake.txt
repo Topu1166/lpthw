@@ -16,3 +16,6 @@ This is  only for practice using cat >> ./lpthw/fake.txt
 word4
 word2
 word3
+word5
+word6
+word7
