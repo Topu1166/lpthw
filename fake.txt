@@ -11,6 +11,31 @@ gobuster link = go install github.com/OJ/gobuster/v3@latest
 wordlist link = git clone https://github.com/danielmiessler/SecLists.git
 it being one of the most famous wordlist
 collections in use today.
+
+nmap -sn 192.168.0.0/24
+Starting Nmap 7.99 ( https://nmap.org ) at 2026-05-27 05:38 -0400
+Nmap scan report for 192.168.0.1
+Host is up (0.0096s latency).
+MAC Address: 78:20:51:92:4A:A5 (TP-Link Systems)
+Nmap scan report for 192.168.0.106
+Host is up (0.0079s latency).
+MAC Address: 58:11:22:D5:95:53 (ASUSTek Computer)
+Nmap scan report for 192.168.0.126
+Host is up (0.00084s latency).
+MAC Address: C8:34:8E:16:D3:43 (Intel Corporate)
+Nmap scan report for 192.168.0.157
+Host is up (0.14s latency).
+MAC Address: E0:13:B5:4B:F9:31 (vivo Mobile Communication)
+Nmap scan report for 192.168.0.180
+Host is up (0.039s latency).
+MAC Address: D0:91:68:83:93:49 (Shenzhen Chuangwei-RGB Electronics)
+Nmap scan report for 192.168.0.214
+Host is up (0.11s latency).
+MAC Address: AE:DE:36:0F:E1:86 (Unknown)
+Nmap scan report for 192.168.0.138
+Host is up.
+Nmap done: 256 IP addresses (7 hosts up) scanned in 4.06 seconds
+
 This line must be deleted.
 This is  only for practice using cat >> ./lpthw/fake.txt 
 word4
