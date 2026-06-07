@@ -2966,4 +2966,18 @@ def even_num(numbers):
 result = even_num(numbers) 
 print(f"The even numbers are: \n{result}")
 
+#Reversing a number using a while loop: 
 
+def reversed_number1(num):
+    reversed_number = 0
+
+    while num > 0:
+        last_digit = num % 10 #get rid of the last digit 
+        reversed_number = reversed_number * 10 + last_digit  
+        num = num // 10 
+
+    return reversed_number 
+
+number = 123 
+result = reversed_number1(number) 
+print(f"The reversed number is {result}.") 
