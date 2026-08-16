@@ -2981,3 +2981,8 @@ def reversed_number1(num):
 number = 123 
 result = reversed_number1(number) 
 print(f"The reversed number is {result}.") 
+
+
+#Encapsulation when object controlls its own data 
+
+
