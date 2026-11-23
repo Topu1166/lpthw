@@ -1,2 +1,3 @@
 1. timedatectl list-timezones | grep -i "Asia" 
-2. sudo dpkg-reconfigure locales (to change language then sudo reboot to take the effect) 
+2. sudo dpkg-reconfigure locales (to change language then sudo reboot to take the effect)
+3. find /home/cat/lpthw/ -iname "*web*" -printf "%Y %p\n" 
