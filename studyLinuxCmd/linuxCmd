@@ -1,0 +1,2 @@
+1. timedatectl list-timezones | grep -i "Asia" 
+2. sudo dpkg-reconfigure locales (to change language then sudo reboot to take the effect) 
